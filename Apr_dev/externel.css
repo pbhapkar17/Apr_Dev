@@ -1,0 +1,37 @@
+h1,h2{
+    background-color: brown;
+}
+
+/*syntax: class selector: .(period operator)class_name {
+    property:value;
+} */
+.container {
+    color: blueviolet;
+    font-family: monospace;
+    font-size: 20px;
+    padding-left: 55px;
+}
+.main-container {
+    overflow: auto;
+    /* overflow: scroll; 
+    overflow-x:scroll
+    overflow-y:scroll
+    */
+    border: 2px solid red;
+    width: 150px;
+    height: 80px;
+    background-color: bisque;
+    font-size: 30px;
+    font-family: cursive;
+    text-align: center;
+    padding: 11px;
+
+}
+
+.main2{
+    border: 2px solid red;
+    width: 150px;
+    height: 80px;
+    background-color: bisque;
+    font-size: 20px;
+}

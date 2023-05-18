@@ -1,0 +1,23 @@
+.header-container{
+    position: absolute;
+    top: 0px;
+    height: 40px;
+    width: 120px;
+    border: 2px solid blueviolet;
+    background-color: bisque;
+    z-index: -1;
+}
+.div-container{
+    background-color: aquamarine;
+    z-index: 1;
+    position: absolute;
+    height: 40px;
+    width: 200px;
+    border: 2px solid blueviolet;
+}  
+.btn{
+    position: relative;
+    top: 100px;
+    float: left;
+
+}

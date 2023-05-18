@@ -1,0 +1,45 @@
+
+.parent{
+    height: 1700px;
+    width: 1000px;
+    border: 2px solid blueviolet;
+}
+.pos-static{
+    position: static;
+    top: 20px;
+    height: 50px;
+    width: 100px;
+    border: 2px solid blueviolet;
+}
+.pos-rel{
+    position: relative;
+    height: 50px;
+    width: 100px;
+    border: 2px solid blueviolet;
+    top: 0px;
+    left: 100px;
+}
+.pos-abs{
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    border: 2px solid blueviolet;
+    top: 79px;
+    left: 246px;
+}
+.pos-sticky{
+    position: sticky;
+    top: 0px;
+    height: 30px;
+    width: 1000px;
+    border: 2px solid blueviolet;
+    background-color: chocolate;
+}
+.pos-footer{
+    position: fixed;
+    height: 30px;
+    width: 1000px;
+    border: 2px solid blueviolet;
+    bottom: 0px;
+    background-color: chocolate;
+}

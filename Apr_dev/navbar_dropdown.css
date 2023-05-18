@@ -1,0 +1,109 @@
+/* a{
+    text-decoration: none;
+} */
+.parent-container{
+    overflow: hidden;
+    background-color: coral;
+}
+.parent-container a{
+    float: left;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+}
+.btn{
+    color: white;
+    font-size: 18px;
+    padding: 4px 5px;
+    text-align: center;
+    background-color: rgb(7, 249, 32);
+    border: none;
+    position: absolute;
+    top: 66px;
+    left: 377px;
+    cursor: pointer;
+}
+.dropdown a{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    /* display: block; */
+    display: none;
+    text-align: left;
+  
+}
+
+.dropdown-container {
+    float: left;
+    overflow: hidden;
+  
+  }
+  .dropdown{
+    position: absolute;
+    left: 377px;
+    background-color: #e4789c;
+    width: 107px;
+    top: 96px;
+  }
+
+  .dropdown-container:hover .dropdown a{
+    display: block;
+  }
+  .dropdown a:hover{
+    background-color: chocolate;
+  }
+  .dropdown-container:hover .btn{
+    background-color: green;
+  }
+  .parent-container a:hover{
+
+    background-color: #e4789c;
+
+  }
+
+  .sidebar-left{
+    border: 1px solid black;
+    width: 150px;
+    height: 583px;
+    background-color: bisque;
+    overflow: auto;
+    padding: 5px 6px;
+    word-wrap: break-word;
+  }
+  .sidebar-right{
+    border: 1px solid black;
+    width: 150px;
+    height: 629px;
+    background-color: bisque;
+    position: absolute;
+    right: 8px;
+    top: 100px;
+  }
+
+  .footer{
+    border: 1px solid black;
+    width: 98.6%;
+    height: 30px;
+    background-color: burlywood;
+    position: fixed;
+    bottom: 0px;
+  }
+  .bg-img{
+    position: absolute;
+    width: 553px;
+    height: 641px;
+    top: 55px;
+    /* left: 163px; */
+    z-index: -1;
+  }
+  .title{
+    border: 1px solid black;
+    width: 99.9%;
+    height: 46px;
+    background-color: rgb(211, 242, 69);
+    font-size: 30px;
+    text-shadow: 4px 4px 4px deeppink
+  }

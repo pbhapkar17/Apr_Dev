@@ -1,0 +1,85 @@
+p{
+    text-align: center;
+    font-size: 30px;
+}
+.cls-selector{
+    text-align: left;
+    font-size: 30px;
+}
+#h1container{
+    text-align: center;
+    font-size: 30px;
+}
+h2,h3{
+    padding: 2px 2px;
+    text-align: center;
+    color: aquamarine;
+}
+
+/* *{
+    padding: 12px 22px;
+    border: 1px solid blue;
+    text-align: center;
+    color: rgb(12, 239, 164);
+} */
+
+div p{
+    color: yellow;
+}
+
+div > h1{
+    color: yellowgreen;
+}
+pre + p{
+    color: violet;
+}
+h1 ~ h4{
+    background-color: aqua;
+}
+/* button:hover{
+    background-color: yellowgreen;   
+} */
+button.submit-btn:hover{
+   background-color: yellowgreen;
+}
+/* span:hover{
+    color: rgb(241, 69, 187);
+    font-size: 30px;
+} */
+
+span.span-hover:hover{
+    color: rgb(241, 69, 187);
+    font-size: 30px;
+}
+
+input:focus{
+    
+   outline: rgb(17, 0, 255);
+   border-color:  rgb(241, 69, 187);
+   background-color: antiquewhite;
+}
+h6:first-child{
+    color: yellowgreen;
+}
+
+input:checked{
+    height: 20px;
+    width: 20px;
+}
+
+a:active{
+    color: turquoise;
+}
+
+button.disable-btn:disabled{
+    background-color: gray;
+}
+ 
+h5::first-letter{
+    color: yellow;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+p::first-line{
+    color: greenyellow;
+}
