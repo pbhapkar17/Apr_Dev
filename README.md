@@ -89,3 +89,7 @@ APR/FEB >> STUDENT >> git bash here >>ur main branch >> create new branch from i
 APR >> MAM_ANGULAR >> git bash here >> git clone https://github.com/pbhapkar17/Apr_Dev -b APR_FEB_ANGULAR >> open repository folder into VS Code>> daily do only git pull
     >>  MAM_HTML_CSS_JS >>git bash here >>> git clone https://github.com/pbhapkar17/Apr_Dev -b HTML_CSS_JS >> open repository folder into VS Code>> daily do only git pull
 FEB >> MAM_ANGULAR >> git bash here >> git clone https://github.com/pbhapkar17/Apr_Dev -b APR_FEB_ANGULAR  >> open repository folder into VS Code>> daily do only git pull
+
+
+to create new angular project:
+1. ng new Angular
