@@ -1,0 +1,5 @@
+ENVIRONMENT SETUP -
+1.VS CODE 
+2.NODE.JS, command - node --version
+3.LATEST ANGULAR VERSION - npm install -g @angular/cli , COMMAND - ng version
+4. TO CREATE NEW PROJECT - ng new project_name
