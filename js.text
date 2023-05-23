@@ -1,0 +1,4 @@
+js:
+1. editor : VS code
+2. installer : node.js
+to check node installed or not : command:  node --version
