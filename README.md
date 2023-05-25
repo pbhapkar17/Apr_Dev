@@ -88,3 +88,18 @@ APR/FEB >> STUDENT >> git bash here >>ur main branch >> create new branch from i
 APR >> MAM_ANGULAR >> git bash here >> git clone https://github.com/pbhapkar17/Apr_Feb -b Feb_Apr_Angular >> open repository folder into VS Code>> daily do only git pull
     >>  MAM_HTML_CSS_JS >>git bash here >>> git clone https://github.com/pbhapkar17/Apr_Dev -b HTML_CSS_JS >> open repository folder into VS Code>> daily do only git pull
 FEB >> MAM_ANGULAR >> git bash here >> git clone https://github.com/pbhapkar17/Apr_Feb -b Feb_Apr_Angular >> open repository folder into VS Code>> daily do only git pull
+
+
+how to RUN JS files
+1 way :
+open terminal on folder having .js file
+run command : node fileName.js
+
+2 way :
+create only html file,add logical code to the script tag,, double click on it and run it
+
+3 Way:
+make two files html , js
+create connection between them using script tag add file name to the scr atteribute
+write html code to the html file and js (functional code into the js file save it)
+to run double click on html file it will show u the output
