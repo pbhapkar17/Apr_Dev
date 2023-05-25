@@ -93,3 +93,8 @@ FEB >> MAM_ANGULAR >> git bash here >> git clone https://github.com/pbhapkar17/A
 
 to create new angular project:
 1. ng new Angular
+
+to run application : ng s -o
+
+to create component : ng g c componentName / ng generate component componentName
+e.g ng generate component login
