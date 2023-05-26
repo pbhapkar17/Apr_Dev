@@ -71,7 +71,7 @@ js practice
 -----------------------------------------------------------------------------------
 
 folder >>mam >>right git bash here >>
-git clone https://github.com/pbhapkar17/Apr_Feb - b Feb_Apr_Angular  >>enter
+git clone https://github.com/pbhapkar17/Apr_Dev/tree/APR_FEB_ANGULAR  >>enter
 
 open cloned folder into vs code
 
