@@ -81,3 +81,14 @@ console.log(items);
 function test2(){
     return 'priya';
 }
+console.log(typeof(items));
+
+console.log(typeof(color2));
+
+
+
+//length property to know about length of array and string;
+
+let cars = ['120','i10','swift','mini cup','marcdeez'];
+
+console.log(cars.length);
