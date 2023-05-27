@@ -3,3 +3,23 @@ ENVIRONMENT SETUP -
 2.NODE.JS, command - node --version
 3.LATEST ANGULAR VERSION - npm install -g @angular/cli , COMMAND - ng version
 4. TO CREATE NEW PROJECT - ng new project_name
+
+if in between project creation error occors like schematic work flow failed etc
+1.delete node_module folder
+2.npm install / npm i / npm install --force / npm i -f  : it wil regenrate node module folder
+
+To run application(terminal should open at project folder) : ng serve --open/ ng s -o / ng serve -o/ ng serve /ng s 
+
+To Create new branch :           git checkout -b 'new_brach_name' parent_branch
+To seitch from branch:           git checkout branch_name
+                                 git status
+ To check branches into repo:    git branch 
+ To add changes(all files) :     git add . 
+ If want to files one by one :   git add angular_SetUp.txt
+ To commit changes :             git commit -m 'msg'
+ To push changes to branch :     git push
+ To get changes from gitHun :    git pull
+
+
+ if u r cloning my branch after clone u would see node_module folder will not present:
+ to create it run command : npm i
