@@ -92,3 +92,52 @@ console.log(typeof(color2));
 let cars = ['120','i10','swift','mini cup','marcdeez'];
 
 console.log(cars.length);
+
+let num3 = 60000;
+//console.log(num3.length); length property would not applicable to the number value
+
+console.log(cars[2]);
+console.log(cars[4]);
+console.log(cars[cars.length - 1]); //[5-1]= [4]
+
+//var no =[10,20 ,'poonam',true,30.255, test() ] //hetrogeneus items
+
+let studentDetails = {}  //emty object  {key:value}
+
+let empData = {
+    name : 'Satish',
+    age:50,
+    address :'pune',
+    mobNo: 6598889
+}
+console.log(empData.age);
+console.log(empData.mobNo);
+//let multpleEmpData =[{},{},{}] //array of object
+let multpleEmpData = [
+    {
+        name: 'Satish',
+        age: 50,
+        address: 'mumbai',
+        mobNo: 56598889
+    },
+    {
+        name: 'shree',
+        age: 50,
+        address: 'pune',
+        mobNo: 656598889
+    },
+    {
+        name: 'kedar',
+        age: 50,
+        address: 'pune',
+        mobNo: 656598889
+    }
+]
+
+console.log(empData);
+console.log(multpleEmpData);
+console.log(multpleEmpData[0].mobNo);
+console.log(multpleEmpData[2].name);
+
+let name = multpleEmpData[2].name;
+console.log(name);
