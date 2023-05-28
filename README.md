@@ -1,6 +1,7 @@
-ng new angular_project
-open terminal on project created run ng s -o
+To create Project : ng new projectName
+routing : y
+css
 
-If u want to run my project : open terminal on ANGULAR_PROJECT 
-RUN >> npm install >> it will generate node module folder
-RUN >> ng s -o
+To Run Angular project >> Open Terminal at ur project Folder : ng s -o
+ng serve / ng serve --open / ng s / ng s --open
+
