@@ -141,3 +141,25 @@ console.log(multpleEmpData[2].name);
 
 let name = multpleEmpData[2].name;
 console.log(name);
+
+let data = [
+    {
+        name: 'Raj',
+    },
+    [
+        {
+            name1: 'Priya'
+        }
+    ],
+    {
+        name: 'Om'
+    },
+    [20, 50, [800, 80, [90, 900]]]
+]
+console.log(data);
+console.log(data[0].name);
+console.log(data[1][0].name1);
+console.log(data[3][2][2][0]);
+let value = data[3][2][2][0];
+console.log(value);
+
