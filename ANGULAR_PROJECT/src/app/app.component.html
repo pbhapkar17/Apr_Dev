@@ -1,5 +1,6 @@
 <br><br>
 <!-- <h2>{{firstName}}</h2> -->
+<h2 class="user-name">WelCome {{studentName}}</h2><br>
 <div class = "container">
     <form>
         <h2>{{formTitle}}</h2>
@@ -14,3 +15,32 @@
         <button class="sbmt-btn">Submit</button>
     </form>
 </div>
+
+<!-- //data binding in angular:
+// two categouries: 1.one way data Binding , 2.two way data binding
+// 1.one way data Binding -
+//1.string interpolation: {{}}
+//2.property Binding:[]
+//3.Event binding:()
+//2.two way data binding:[()] -->
+
+<p>You have received amount --- {{amount}}</p>
+<p>{{isFavCity}}</p>
+<!--Test cases 1: can we use typeof operator into interpollation : no we can not use-->
+<!-- <p>{{typeof(isFavCity)}}</p> -->
+
+<!---Test cases 2: can we use arithmatic operators into interpollation :yes we can use -->
+<p> {{50+10}}</p>
+
+<!-- -Test cases 3: can we use methods/functions into intrpl : yes we can use  -->
+<p>{{testingInterpolation(30,60)}}</p>
+
+<!-- test case no 4: can we use assignment operator with interpolation :no we can not use
+= - assigment operator (used to assign a value)
+== - Equality operator (it will check only value equality)
+=== - Equality operator(it will check value as well as datatype)-->
+<!-- {{isFavCity = true}} -->
+<p>{{isFavCity == false}}</p>
+<p>{{isFavCity === false}}</p>
+<!-- <p>{{amount === 5600}}</p> if data type is different then it will through an error -->
+<br><br><br><br><br><br>

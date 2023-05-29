@@ -12,3 +12,8 @@
     border: none;
     color: white;
 }
+.user-name{
+    color: rgb(237, 16, 237);
+    font-size: 30px;
+    text-align: center;
+}

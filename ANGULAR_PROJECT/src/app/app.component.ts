@@ -8,18 +8,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ANGULAR_PROJECT';
+ //propertyName :datatype = value/data;
+ //testcase1  
+  firstName : string = 'poonam';  
 
-  firstName : string = 'poonam';   //propertyName :datatype = value/data;
+  //testcase 2
   firstName1 = 'poonam';
   firstName2! : string  ;
   surName2 : any;
   surName : any = true;
   formTitle : string = 'Login Form...';
+  studentName = 'Vishal';
+  amount = '5600';
+  isFavCity = false;
   
+   testingInterpolation( x : number, y : number ){
+  
+      return x + y;
+  }
 }
 
-//data binding in angular:
-// two types: 
-// 1.one way data Binding :
-//1.string interpolation: {{}}
-// 2.two way data binding
