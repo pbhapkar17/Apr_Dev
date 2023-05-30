@@ -15,10 +15,12 @@ export class LoginComponent {
 
   amount: number = 50000;
   panNo: any = true;
-
+  testingEventDB:any;
   studentName = "Shreeya";
   studentMarks = 70;
   isStudentActive = true;
+  myName = "Poonammmmmm";
+  gender = true;
 
     submit() {
     let num = 20;
@@ -38,6 +40,9 @@ export class LoginComponent {
     // let title = '..Login Form..'
     // return typeof(title) //legel code o/p:string
     return '..Login Form..'
+  }
+  testingEventBinding(){
+   this.testingEventDB = "testing... ";
   }
 //data binding techniques in angular : data bind
 //1. one way data binding : .ts file's data would get transfer to .hmlt(DOM)

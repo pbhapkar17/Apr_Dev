@@ -1,7 +1,7 @@
 
 
 
-<div class="login-form-container">
+<!-- <div class="login-form-container">
     <h2>{{formTitleTest()}}</h2>
   
     <div>
@@ -21,16 +21,22 @@
 <h2>Welcome {{studentName}}</h2>
 <h2>{{studentMarks}}</h2>
 <h2>{{isStudentActive}}</h2>
-{{studentName}}
+{{studentName}} -->
 
 <!--  can we use typeof operator in string interpollation ::we can no use -->
 <!-- <h2>{{typeof(studentName)}}</h2> -->
-<h2>{{interpolationTest()}}</h2>
-<h2>{{10*33}}</h2>
+<!-- <h2>{{interpolationTest()}}</h2>
+<h2>{{10*33}}</h2> -->
 <!-- <h2>{{let a = 30}}</h2> assigment operator is not possible-->
 <!-- {{amount = 900}} assigning value with interpollation not possible-->
 
- {{amount == 50000}}  <!--we can use equality operator with interpolation -->
- 
+ <!-- {{amount == 50000}} 
+  we can use equality operator with interpolation -->
+  {{myName}}
+ <br>
+ Name: <input type="text" [value] = "myName"><br>
+ Gender: <input type="radio" [checked] = "gender"><br><br>
+ <button (click)="testingEventBinding()">Button</button>
+ <p>{{testingEventDB}}</p>
 <br><br><br>
 
