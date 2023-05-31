@@ -21,6 +21,7 @@ export class LoginComponent {
   isStudentActive = true;
   myName = "Poonammmmmm";
   gender = true;
+  city = 'mumbai';
 
     submit() {
     let num = 20;

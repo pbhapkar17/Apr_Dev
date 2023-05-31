@@ -38,5 +38,12 @@
  Gender: <input type="radio" [checked] = "gender"><br><br>
  <button (click)="testingEventBinding()">Button</button>
  <p>{{testingEventDB}}</p>
+ <input type="text" [value]="testingEventDB"><br><br>
+
+ <!-- Two way data binding -->
+ <input type="text" [(ngModel)]="city"><br><br>
+ {{city}}
+
+ <input type="text" [(ngModel)]="myName">
 <br><br><br>
 
