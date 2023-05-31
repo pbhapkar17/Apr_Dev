@@ -21,10 +21,24 @@ export class AppComponent {
   studentName = 'Vishal';
   amount = '5600';
   isFavCity = false;
-  
+  myName = "Om";
+  gender = false;
+  isDisabled = true;
+  eventBindingData = 60000;
+  twoWayBindingTest = 96565;
+
    testingInterpolation( x : number, y : number ){
   
       return x + y;
+  }
+
+  testingEventBinding(){
+    this.eventBindingData = 50000;
+    console.log(this.eventBindingData);
+    
+  }
+  test(){
+    console.log(this.twoWayBindingTest);
   }
 }
 
