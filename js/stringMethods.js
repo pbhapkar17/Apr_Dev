@@ -37,3 +37,39 @@ let para7 = "pune i like pune";
 let para8 = para5.replace(/pune/g,"mumbai");
 //let para8 = para5.replace(/Pune/ig,"mumbai");
 console.log(para8);
+
+//replaceAll()replces all values
+let text7 = 'skx pune og pune pune llll pune pune';
+let text8 = text7.replaceAll('pune','mumbai');
+console.log(text8);
+
+//toUpperCase()
+let test5 = 'Poonam likes jaguar hhhHHHHHH JJJJJJ KKKK';
+let convertedValue = test5.toUpperCase();
+console.log(convertedValue);
+//toLowerCase();
+let convertedValue2 = test5.toLowerCase();
+console.log(convertedValue2);
+
+//concate():(string,array)
+let test7 = 'helloooo';
+let test8 = 'India';
+let res = test7 + " " + test8;
+console.log(res);
+
+let res2 = test7.concat(" ", test8)
+console.log(res2);
+
+let res3 = test8.concat(" ", test7, " ", "Maharashtra");
+console.log(res3);
+
+//The trim() method removes whitespace from both sides of a string
+let myName = '    poonam    ';
+console.log(myName);
+console.log(myName.trim());
+console.log(myName.trimStart());
+console.log(myName.trimEnd());
+
+//The charAt() method returns the character at a specified index (position) in a string:
+let myLastName = 'Patil';
+console.log(myLastName.charAt(0));
