@@ -73,3 +73,21 @@ console.log(myName.trimEnd());
 //The charAt() method returns the character at a specified index (position) in a string:
 let myLastName = 'Patil';
 console.log(myLastName.charAt(0));
+
+//String split() a string can be converted to an array with the split() method
+let date = "10-4-1992";
+let dateNew = date.split('-')
+console.log(dateNew);
+console.log(dateNew[2]);
+
+let name = 'poonam patil';
+let updatedName = name.split(' ');
+console.log(updatedName);
+console.log(updatedName[0]);
+console.log(updatedName[1]);
+
+
+
+
+
+
