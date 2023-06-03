@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
+console.log('app.module.ts file');
 
 @NgModule({
   declarations: [ //components, directives, pipes
     AppComponent, 
     LoginComponent, 
-    SignupComponent
+    SignupComponent, 
+    HomeComponent
   ],
   imports: [ //modules
     BrowserModule,

@@ -1,5 +1,3 @@
-<br><br>
-
 
 <!-- <h2>{{firstName}}</h2> -->
 <!-- <h2 class="user-name">WelCome {{studentName}}</h2><br>
@@ -70,10 +68,14 @@
 
 <!-- <app-login></app-login>
 <app-signup></app-signup> -->
-<br>
 
 
-<a routerLink="/login"> Login comoponent </a><br>
-<!-- <a href="/login">login compo...</a> application is getting refresh hence avoid to use -->
-<router-outlet></router-outlet>
-<br><br><br><br><br><br>
+
+<!-- <a href="login">click</a> Application is getting refresh while roting href attribute hance avoid to use it. -->
+ <!-- <a routerLink = "login">click..</a>
+ <button routerLink="signUp">signup</button> -->
+
+
+  <!--it is an angular directive from router library
+     and used to insert components macthed by routes to be display on the screen-->
+     <router-outlet></router-outlet>
