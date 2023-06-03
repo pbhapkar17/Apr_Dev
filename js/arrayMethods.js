@@ -71,6 +71,20 @@ console.log(colors5.slice(1));
 console.log(colors5.slice(1,4));
 
 
+//extra point:undefined value for not present  element  in array
+let colors6 = ['red','black','blue','yellow' ,20,54,655];
+console.log(colors6[9]);//undefined
+
+//indexOf() : string and array method
+let colors7 = ['red','black','blue','yellow' ,20,54,655];
+console.log(colors7.indexOf('yellow'))//3
+console.log(colors7.indexOf('yellow123')); //-1 (if value not found)
+
+//lastIndexOf():string and array method
+let colors8 = ['red','yellow','black','blue','yellow' ,20,'yellow',54,655];
+console.log(colors8.lastIndexOf('yellow'))//6
+console.log(colors8.lastIndexOf('yellow22'))//-1
+
 //number methods :
 //1.to string :i t will convert number to string
 let num12 = 6564489496323269656265999;
