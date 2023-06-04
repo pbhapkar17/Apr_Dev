@@ -15,4 +15,5 @@ simple routing :
 3. add routerLink attribute to the button or achor tag to link component/screen
 
 command to create new module :ng g m admin --routing
- 
+ to create module and update app.routing .ts :
+ ng g m student --route student --module app.module
