@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
+import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
 console.log('app.module.ts file');
 
 @NgModule({
@@ -14,7 +15,7 @@ console.log('app.module.ts file');
     AppComponent, 
     LoginComponent, 
     SignupComponent, 
-    HomeComponent
+    HomeComponent, PathNotFoundComponent
   ],
   imports: [ //modules
     BrowserModule,

@@ -17,3 +17,22 @@ simple routing :
 command to create new module :ng g m admin --routing
  to create module and update app.routing .ts :
  ng g m student --route student --module app.module
+
+Angular Artchitecture
+ compo: building blocks of angular application
+ compo.. + compo... + pipes + directives + services = module
+ module.. + module ... = project
+
+ Eagrely loaded module: appModule : will loads initially.
+-landing screen related components only we load here.
+
+Lazy loading:  As per the need/requirement/action gets loaded.
+(pros: initially unneccessorly modules will not gets loaded,
+network traffic reduce, smooth light waith application ,
+application will not freez/crash bcz we are loading compo from module as per the requirment )
+multiple modules :
+-multi compo , services etc...
+
+
+
+
