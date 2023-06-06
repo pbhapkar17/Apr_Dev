@@ -9,6 +9,7 @@ https://drive.google.com/drive/folders/1xv0AEUNOjeVkG9eOnATUB3lvm090A_u3
 recorded session link:
 https://drive.google.com/drive/folders/1TdwQqJ3chuHNultX_-va45MgvvLLqllb?usp=share_link
 
+If u r cloning project then u have to generate node_module folder locally: npm i / npm i -f then only do ng s -o
 simple routing :
 1. add  <router-outlet></router-outlet> directive into app.compo.html
 2. create path and component into routing.module.ts file
@@ -34,5 +35,24 @@ multiple modules :
 -multi compo , services etc...
 
 
+global/open component routing:
+1.create open/global compo
+2.add path and component object into app.routing.ts file
+3.redirect from .html or .ts file
+4 .html file : routerLink ="/path" on action it will redirect.
 
+to fetch component inside's module:
+1.command to create new module :ng g m admin --routing
+.routing.ts
+module.ts
 
+2.open terminel at module folder to create cmponent inside it: ng g c adminLogin
+3.import custom (created by u) module app.routing.ts(global routing file) 
+e.g { path : 'admin', loadChildren:()=> import('./admin/admin.module').then(mod => mod.AdminModule)}
+4.create button to home screen to redirect into modules compo
+routerLink : '/moduleName/component inside module' 
+e.g. routerLink:'/admin/admin-signup'
+
+update angular 14 :
+ to create new module and update app.routing.ts file autmatically command :
+ ng g m student --route student --module app.module

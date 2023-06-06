@@ -15,7 +15,8 @@ console.log('app.module.ts file');
     AppComponent, 
     LoginComponent, 
     SignupComponent, 
-    HomeComponent, PathNotFoundComponent
+    HomeComponent, 
+    PathNotFoundComponent
   ],
   imports: [ //modules
     BrowserModule,

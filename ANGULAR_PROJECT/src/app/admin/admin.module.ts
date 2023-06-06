@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 
 import { AdminSignUpComponent } from './admin-sign-up/admin-sign-up.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 
 console.log('admin . module.ts');
@@ -11,7 +12,8 @@ console.log('admin . module.ts');
 @NgModule({
   declarations: [
     
-      AdminSignUpComponent
+      AdminSignUpComponent,
+           AdminloginComponent
   ],
   imports: [
     CommonModule,
