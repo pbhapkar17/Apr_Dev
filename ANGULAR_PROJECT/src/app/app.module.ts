@@ -3,25 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { HomeComponent } from './home/home.component';
-import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
+
+
 console.log('app.module.ts file');
 
 @NgModule({
   declarations: [ //components, directives, pipes
-    AppComponent, 
-    LoginComponent, 
-    SignupComponent, 
-    HomeComponent, 
-    PathNotFoundComponent
+    AppComponent, LandingComponent, LoginComponent, 
+    
   ],
   imports: [ //modules
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

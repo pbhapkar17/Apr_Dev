@@ -56,3 +56,11 @@ e.g. routerLink:'/admin/admin-signup'
 update angular 14 :
  to create new module and update app.routing.ts file autmatically command :
  ng g m student --route student --module app.module
+
+to redirect on compo from .ts file:
+open compo:
+1.button, bind function on click event
+2.define function into .ts file
+3.import router class to .ts file
+4.add router  class to constructor
+5.take reference property using this keyword and redirect to compo using navagateByUrl method
