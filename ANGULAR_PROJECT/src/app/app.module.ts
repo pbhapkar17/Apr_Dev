@@ -5,13 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 console.log('app.module.ts file');
 
 @NgModule({
   declarations: [ //components, directives, pipes
-    AppComponent, LandingComponent, LoginComponent, 
+    AppComponent,
+    LandingComponent,
+    LoginComponent,
+    SignUpComponent, 
     
   ],
   imports: [ //modules

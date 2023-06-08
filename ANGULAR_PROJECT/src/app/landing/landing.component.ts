@@ -10,6 +10,9 @@ export class LandingComponent {
 
  }
   login(){ 
-    this.router.navigateByUrl('/login')
+    this.router.navigateByUrl('/login');
+  }
+  studentActivity(){
+    this.router.navigateByUrl('student/studentActivity');
   }
 }
