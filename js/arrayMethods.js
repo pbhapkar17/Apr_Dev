@@ -68,7 +68,7 @@ console.log(colors4);
 //start index in slice method is inclusive and end index is exclsive
 let colors5 = ['red','black','blue','yellow' ,20,54,655];
 console.log(colors5.slice(1));
-console.log(colors5.slice(1,4));
+console.log(colors5.slice(1,4));//blue,yellow,20
 
 
 //extra point:undefined value for not present  element  in array
@@ -92,9 +92,10 @@ let convertedNum12 = num12.toString();
 console.log(convertedNum12.length);
 
 //toFixed() returns a string, with the number written with a specified number of decimals:
-let num9 = 5.6566;
-console.log(num9.toFixed(1));
-console.log(num9.toFixed(2));
+let num9 = 5.65665878880;
+console.log(num9.toFixed(1)); //5.7
+console.log(num9.toFixed(2)); //5.66
+console.log(num9.toFixed(4));//5.6567
 
 //valueOf(): returns value of variable
 let x = 'kkkk';

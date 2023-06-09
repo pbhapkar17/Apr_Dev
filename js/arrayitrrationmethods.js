@@ -101,5 +101,21 @@ console.log(uniqueChars);
 let newAray = duplicateArray.filter((item,i)=>{
    return duplicateArray.indexOf(item) === i;
 })
-
 console.log(newAray);
+
+//arrow method/function
+let result = function test(a,b){
+ return a +b ;
+}
+//console.log(test(20,90));
+
+//(a,b) => a + b;
+
+
+//for of loop
+const cars = ["BMW", "Volvo", "Mini"];
+let carsNew = [];
+for(let x of cars){
+    carsNew.push(x)
+}
+console.log(carsNew);

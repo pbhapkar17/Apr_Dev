@@ -44,6 +44,16 @@ else{
     console.log('failed');
 }
 
+let s = 60;
+if(s > 35){
+    console.log('passed');
+}
+else{
+    console.log('failed');
+}
+
+//ternory operator statement/condition ? True : False;
+    s < 35 ? console.log('passed..') : console.log('failed..');
 
 //else if
 if(marks > 60 && marks < 70){
