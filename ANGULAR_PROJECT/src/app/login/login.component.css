@@ -45,3 +45,12 @@
     position: relative;
     top: 51px;
 }
+
+.back-btn{
+    position: relative;
+    left: 20px;
+    top: 20px;
+    font-size: 20px;
+    border: none;
+    background-color: darkorange;
+}

@@ -15,4 +15,10 @@ export class LandingComponent {
   studentActivity(){
     this.router.navigateByUrl('student/studentActivity');
   }
+  directives(){
+    this.router.navigateByUrl('directives');
+  }
+
+
+
 }

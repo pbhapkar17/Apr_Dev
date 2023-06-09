@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
 
 
 console.log('app.module.ts file');
@@ -15,7 +16,8 @@ console.log('app.module.ts file');
     AppComponent,
     LandingComponent,
     LoginComponent,
-    SignUpComponent, 
+    SignUpComponent,
+    DirectivesInAngularComponent, 
     
   ],
   imports: [ //modules
