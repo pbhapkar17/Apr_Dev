@@ -119,3 +119,23 @@ for(let x of cars){
     carsNew.push(x)
 }
 console.log(carsNew);
+
+let data = {
+    name: 'Raj',
+    age: 50,
+    city: 'mumbai'
+}
+for(let x in data){
+    console.log(x);
+    console.log(data[x])
+}
+
+const numbers = [45, 4,4,5, 9, 16,5, 25];
+let newArr = numbers.reduce((prviousArrayItems,curValue)=>{
+    if(!prviousArrayItems.includes(curValue)){
+        prviousArrayItems.push(curValue);
+    }
+    return prviousArrayItems
+  },[])
+ 
+console.log(newArr);
