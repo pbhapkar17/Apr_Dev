@@ -13,10 +13,19 @@ export class DirectivesInAngularComponent {
     undefinedProperty : any;
     nullProperty = null;
     toggel : boolean = false;
+    cars : string[] = ['mini cup','jaguar','swift','marcedeez'];
+    carDetails = [
+      {carName : 'Swift', carPrice:800000, color:'white'},
+      {carName : 'min cup', carPrice:2500000, color:'white'},
+      {carName : 'marcedeez', carPrice:8000000, color:'white'},
+      {carName : 'i10', carPrice:500000, color:'white'},
+      {carName : 'i20', carPrice:1000000, color:'black'},
+    ];
 
-
+    data = [20,60,50,30,[60,30,89]]
    
     toggelEffect(){
+      let abc ;
       //this.toggel = false;
       // this.toggel = !true >>false and  !false >>true
       this.toggel = !this.toggel;
