@@ -19,3 +19,11 @@ table,th,tr,td{
     border-collapse: collapse;
     padding: 10px 10px;
 }
+.container{
+    color: yellow;
+    font-size: 30px;
+}
+.container1{
+    color: rgb(253, 58, 214);
+    font-size: 30px;
+}
