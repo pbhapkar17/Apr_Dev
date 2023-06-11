@@ -29,6 +29,9 @@ export class DirectivesInAngularComponent {
   //let xyz = []; //js / within function only
   // xyz = [];  property with empty array
   color = 'pink';
+  styleCss = 'yellow2';
+  test = 300;
+  switchValue = 1003;
 
   constructor() {
 

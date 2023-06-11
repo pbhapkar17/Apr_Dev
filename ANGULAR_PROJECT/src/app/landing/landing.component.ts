@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; //import section
 import { Router } from '@angular/router';
-@Component({
+@Component({ //component directive
   selector: 'app-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent {
- constructor(private router : Router){
+  
+  test : any ;  //property section
+
+ constructor(private router : Router){  //di-dependancy Injection
 
  }
-  login(){ 
+  login(){    //functions , lifecycle hooks
     this.router.navigateByUrl('/login');
   }
   studentActivity(){

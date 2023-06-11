@@ -83,6 +83,16 @@ ngStyle Directive: The ngStyle directive facilitates you to modify the style of 
   <li>{{data}}</li>
 </ul>
 
+<div [ngSwitch] = "switchValue">
+
+  <h2 *ngSwitchCase = "600"> 600 Value </h2>
+  <h2 *ngSwitchCase = "200"> 200 value</h2>
+  <h2 *ngSwitchCase = "100"> 100  value</h2>
+  <h2 *ngSwitchDefault> default h2 </h2>
+
+</div>
+
+
 <div class ="container ">
   I like Pune
 </div>
@@ -91,5 +101,13 @@ ngStyle Directive: The ngStyle directive facilitates you to modify the style of 
   I like Pune
 </div>
 
+<h2 [class.container] = "test == 200"
+    [class.container1] = "test == 100"
+    [class.container3] = "test == 300" >
+h22222222222222222222222222
+</h2>
+
+<p style = "color:aqua; font-size: 30px;">paraaaaa</p>
+<p [ngStyle] = "styleCss == 'yellow' ? {'color' : 'yellow'}: {'color' :'green', 'font-size' : '30px'}"> pararjhbdbkdbckjbd</p>
 
 <br><br><br>
