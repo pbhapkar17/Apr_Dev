@@ -9,7 +9,7 @@ export class LandingComponent {
   
   test : any ;  //property section
 
- constructor(private router : Router){  //di-dependancy Injection
+ constructor( private router : Router ){  //di-dependancy Injection
 
  }
   login(){    //functions , lifecycle hooks
@@ -21,7 +21,9 @@ export class LandingComponent {
   directives(){
     this.router.navigateByUrl('directives');
   }
-
+  signUp(){
+    this.router.navigateByUrl('signUp');
+  }
 
 
 }

@@ -54,3 +54,7 @@
     border: none;
     background-color: darkorange;
 }
+.span-err{
+    color:  red;
+    font-size: 16px;
+}
