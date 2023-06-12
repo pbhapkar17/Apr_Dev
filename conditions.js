@@ -81,3 +81,25 @@ switch (marks) {
         console.log('average achievement')
         break;
 }
+// break;
+let cars = ['volvo','Swift','i10','i20','mini cup','marcedeez'];
+let carsNew = [];
+for (let index = 0; index < cars.length; index++) {
+    if(cars[index] == 'i20'){
+      break;
+    }
+    carsNew.push(cars[index]);
+}
+console.log(carsNew);
+
+//continue 
+let cars1 = ['volvo','Swift','i10','i20','mini cup','marcedeez'];
+let car2 = [];
+
+for (let index = 0; index < cars1.length; index++) {
+    if(cars1[index] == 'i20' ){
+      continue;
+    }
+    car2.push(cars1[index]);
+}
+console.log( car2);
