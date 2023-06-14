@@ -7,7 +7,8 @@
     <form #loginForm='ngForm' class="form-container">
     
         <label class="label"> Full Name </label><br>
-        <input type="text" ngModel class="inp-box" name="fName" #fullName='ngModel' pattern="[a-zA-Z]*$" required
+        <input type="text" ngModel class="inp-box" name="fName" 
+           #fullName='ngModel' pattern="[a-zA-Z ]*$" required
             minlength="5" maxlength="70"><br>
     
         <span class="span-err" *ngIf="fullName.errors?.['pattern'] && fullName.touched ">
@@ -29,7 +30,12 @@
         <span *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength'] " class="span-err">
             Please match the pattern
         </span><br>
-    
+
+        <label > Gender </label><br>
+       <input type="radio" required value="Male" name="gender"  ngModel #gender='ngModel'> Male <br>
+       <input type="radio" required value="Female"  name="gender" ngModel #gender='ngModel'>Female <br>
+       <input type="radio" required value="Other"  name="gender" ngModel #gender='ngModel'>  other <br>
+       <span class="span-err" *ngIf="gender.errors?.['required'] ">Gender is required </span>
         <button class="submit-btn" [disabled]="!loginForm.valid" (click)="submit(loginForm.value)"> Submit </button>
     </form>
 </div>
