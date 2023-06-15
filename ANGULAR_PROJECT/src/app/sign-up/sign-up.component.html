@@ -1,1 +1,23 @@
-<p>sign-up works!</p>
+<div> 
+    <h2 class="form-heading"> Sign Up Form</h2>
+    <form class="signup-form-container" [formGroup]="signUpForm!">
+        <label>Name</label><br>
+        <input type="text" formControlName="name" placeholder="Enter your name" ><br>
+        <span class="err" *ngIf="signUpForm.get('name')?.errors?.['required'] && signUpForm.get('name')?.touched">
+            Name is required
+        </span>
+        <span class="err" *ngIf="signUpForm.get('name')?.errors?.['pattern']">
+            Please Enter Valid Name
+        </span><br>
+
+        <label>Email</label><br>
+        <input type="text" formControlName="email" placeholder="Enter your email"><br>
+        <label>Contact</label><br>
+        <input type="text" formControlName="contact"><br>
+        <label>Address</label><br>
+        <input type="text" formControlName="address"><br><br>
+        <label>Gender </label>
+        <input type="radio" formControlName="gender" value="male">Male<br>
+        <button [disabled]="!signUpForm.valid"> Submit </button>
+    </form>
+</div>

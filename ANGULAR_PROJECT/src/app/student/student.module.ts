@@ -15,6 +15,7 @@ console.log('student module');
   imports: [
     CommonModule,
     StudentRoutingModule
-  ]
+  ],
+ 
 })
 export class StudentModule { }

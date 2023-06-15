@@ -7,7 +7,8 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 console.log('app.module.ts file');
@@ -19,12 +20,14 @@ console.log('app.module.ts file');
     LoginComponent,
     SignUpComponent,
     DirectivesInAngularComponent, 
+   
     
   ],
   imports: [ //modules
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
