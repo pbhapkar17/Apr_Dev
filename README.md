@@ -64,3 +64,6 @@ open compo:
 3.import router class to .ts file
 4.add router  class to constructor
 5.take reference property using this keyword and redirect to compo using navagateByUrl method
+
+
+

@@ -1,0 +1,42 @@
+button >> redirect it to signUp form
+add form tag htmlfile
+make a property having FormGroup type
+e.g. signUpForm! : FormGroup
+In module.ts file import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+add>> import:[ FormsModule,
+ ReactiveFormsModule ]
+In signUpForm.html file add [formGroup]="signUpForm"
+Inject form builder in constructor.
+e.g  constructor(private fb: FormBuilder){
+   }
+Add ngOnInit() - lifecycle hook -- call function where we need to add code of form
+e.g ngOnInit(){
+       this.formDef();
+    }
+Make form defination:
+e.g  this.signUpForm = this.fb.group({
+          
+        })
+Add fields in .html files add formControlName
+Define Controlls  >> 
+e.g this.signUpForm = this.fb.group({
+          fullName : []
+        })
+Add remaining fields
+Error:
+ <span>Name is required</span> .html file
+ .ts >> import and use Validators
+ e.g  this.signUpForm = this.fb.group({
+          fullName : ['',[Validators.required]],
+          mobNo:[]
+        })
+Add ngIf conditions to add or remove errors from DOM
+e.g <span *ngIf="!signUpForm.get('fullName')?.touched 
+         && !signUpForm.get('fullName')?.valid
+         && !signUpForm.get('fullName')?.dirty">Hint:Enter Your Full Name here</span>
+        <span class="err" *ngIf="signUpForm.get('fullName')?.errors?.['required'] 
+                 && !signUpForm.get('fullName')?.valid
+                 && signUpForm.get('fullName')?.touched">
+            Name is required
+        </span>
+add for every field.

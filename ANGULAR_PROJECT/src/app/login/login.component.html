@@ -36,6 +36,7 @@
        <input type="radio" required value="Female"  name="gender" ngModel #gender='ngModel'>Female <br>
        <input type="radio" required value="Other"  name="gender" ngModel #gender='ngModel'>  other <br>
        <span class="span-err" *ngIf="gender.errors?.['required'] ">Gender is required </span>
-        <button class="submit-btn" [disabled]="!loginForm.valid" (click)="submit(loginForm.value)"> Submit </button>
+        <button class="submit-btn" [disabled]="!loginForm.valid"
+         (click)="submit(loginForm.value)"> Submit </button>
     </form>
 </div>
