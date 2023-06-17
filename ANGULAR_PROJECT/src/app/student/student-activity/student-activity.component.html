@@ -1,1 +1,18 @@
-<p>student-activity works!</p>
+
+<button (click)="showForm()">Show Sign In Form</button><br><br>
+
+<form [formGroup]="sigInForm" *ngIf="showSignInForm" >
+
+    Password : <input type="text" formControlName="password" 
+                (keyup)="password()"><br>
+                <span *ngIf="!isMatch && sigInForm.get('password')?.dirty" class="err">
+                    password and confirm password sould be same
+                </span ><br>
+    Confirm Password : <input type="text"
+                 formControlName="confirmPassword"
+                 (keyup)="confirmPassword()"><br>
+                 <span *ngIf="!isMatch && sigInForm.get('password')?.dirty"  class="err">
+                    password and confirm password sould be same
+                </span><br>
+
+</form>

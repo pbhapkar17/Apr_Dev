@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { StudentRoutingModule } from './student-routing.module';
 import { StudentActivityComponent } from './student-activity/student-activity.component';
 import { StudentDemoComponent } from './student-demo/student-demo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 console.log('student module');
 
 
@@ -14,7 +15,9 @@ console.log('student module');
   ],
   imports: [
     CommonModule,
-    StudentRoutingModule
+    StudentRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
  
 })

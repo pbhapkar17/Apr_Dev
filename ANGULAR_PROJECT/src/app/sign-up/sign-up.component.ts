@@ -28,7 +28,8 @@ export class SignUpComponent {
           email:[],
           userName:[],
           city:[],
-          address:[]
+          address:[],
+          gender:['Female']
         })
 
       }
