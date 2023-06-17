@@ -31,6 +31,10 @@
             Please match the pattern
         </span><br>
 
+        <label> Confirm Password</label><br>
+        <input type="text" ngModel #confirmPass = 'ngModel' name="confirmPassword">
+
+        <br>
         <label > Gender </label><br> 
        <input type="radio" required value="Male" name="gender"  ngModel #gender='ngModel'> Male <br>
        <input type="radio" required value="Female"  name="gender" ngModel #gender='ngModel'>Female <br>

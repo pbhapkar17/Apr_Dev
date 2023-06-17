@@ -18,13 +18,33 @@
         <span class="err" *ngIf="signUpForm.get('fullName')?.errors?.['minlength'] 
         && !signUpForm.get('fullName')?.errors?.['pattern']">
            Name must contain 10 Alphabets
-        </span><br>
-
+        </span>
+        <br><br>
         <label>MobNo</label><br>
         <input type="text" formControlName="mobNo"><br>
         <span *ngIf="!signUpForm.get('mobNo')?.touched">Hint: Enter you Mobile Number</span>
         <span *ngIf="signUpForm.get('mobNo')?.errors?.['pattern']
-        && signUpForm.get('mobNo')?.touched" class="err">Mobile no should be in Integers</span>
+                && signUpForm.get('mobNo')?.touched " class="err">
+            Mobile no should be in Integers</span>
+        <span class="err" *ngIf="signUpForm.get('mobNo')?.errors?.['minlength']
+                  && !signUpForm.get('mobNo')?.errors?.['pattern']">
+            Please Enter Minimum 10 Digit Mobile Number
+        </span>
+        <span class="err" *ngIf="signUpForm.get('mobNo')?.errors?.['maxlength'] 
+                             && !signUpForm.get('mobNo')?.errors?.['pattern']">
+            Please Enter Maximum 10 Digit Mobile Number
+        </span><br><br>
+        <label>City</label><br>
+        <input type="text" formControlName="city"><br><br>
+
+        <label>Email Id</label><br>
+        <input type="text" formControlName="email"><br>
+
+        <label>User Name</label><br>
+        <input type="text" formControlName="userName"><br>
+
+        <label>Address</label><br>
+        <input type="text" formControlName="address"><br>
 
         <br><br>
         <button [disabled]="!signUpForm.valid"  (click)="submit()"> Submit </button>
