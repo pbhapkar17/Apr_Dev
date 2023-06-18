@@ -13,7 +13,9 @@ export class StudentActivityComponent {
   confirmPassValue : any;
   isMatch! : boolean;
   isMatchConfirm!:boolean;
-
+  pass:any;
+  confirmPass:any
+  showPassword!:boolean;
   constructor(private fb: FormBuilder){}
 
   showForm(){
@@ -25,15 +27,22 @@ export class StudentActivityComponent {
   formDef(){
 
     this.sigInForm = this.fb.group({
-      password:['',[Validators.required]],
-      confirmPassword:[],
-      name:['',[this.nameValidation]]
+      password:[''],
+      confirmPassword:[''],
+      name:['',[Validators.required,this.nameValidation,this.whiteSpaceValidator]]
      }
      )
 
   }
+  
+  whiteSpaceValidator(name:any){
+    let data = name.value;
+    let newdata = data?.trim();
+    let isValid = data.length != newdata.length ;
+    return isValid ? {whiteSpace:true} : null
+  }
 
-
+  //copy Copy COPY CoPy COPY.....
   nameValidation(inp:any){
    console.log(inp.value);
    let data = inp.value?.toLowerCase();
@@ -42,7 +51,11 @@ export class StudentActivityComponent {
   }
 
 
-  passwordMatchingValidatior(){
+  passwordValidatior(inp:any){
+    console.log(inp.value);
+    console.log(this.pass);
+   
+
 
   }
   password() {
@@ -64,5 +77,8 @@ export class StudentActivityComponent {
     else {
       this.isMatch = false;
     }
+  }
+  showPass(){
+    this.showPassword = !this.showPassword;
   }
 }
