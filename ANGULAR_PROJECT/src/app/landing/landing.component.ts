@@ -1,5 +1,7 @@
 import { Component } from '@angular/core'; //import section
 import { Router } from '@angular/router';
+import { StoringDataService } from '../storing-data.service';
+
 @Component({ //component directive
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -8,11 +10,24 @@ import { Router } from '@angular/router';
 export class LandingComponent {
   
   test : any ;  //property section
-
- constructor( private router : Router ){  //di-dependancy Injection
+  userName!:string;
+  list:any;
+  studentsData:any;
+ constructor( private router : Router,
+   private sDataService: StoringDataService
+  ){  //di-dependancy Injection
 
  }
-  login(){    //functions , lifecycle hooks
+  ngOnInit(){
+   this.userName = this.sDataService.userFullName;
+   console.log('  this.userName>>>',  this.userName);
+    
+   this.list = this.sDataService.listOfUsers;
+   //get student data from service
+  }
+ 
+ login(){    //functions , lifecycle hooks
+  
     this.router.navigateByUrl('/login');
   }
   studentActivity(){
@@ -24,6 +39,8 @@ export class LandingComponent {
   signUp(){
     this.router.navigateByUrl('signUp');
   }
-
+show(){
+  this.studentsData = this.sDataService.studentData; 
+}
 
 }

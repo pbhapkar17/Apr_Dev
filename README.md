@@ -65,5 +65,10 @@ open compo:
 4.add router  class to constructor
 5.take reference property using this keyword and redirect to compo using navagateByUrl method
 
+what are different Data transsmission techniques we have in Angular:
+1.By using Services 2.parent Child 3. child parent 4. subject 5.viewchild
 
+1.To create Service: ng genrate service serviceName/ ng g s serviceName
+2.create property or function into service
+3.import service int component(where we want to set or get data to/from service)
 

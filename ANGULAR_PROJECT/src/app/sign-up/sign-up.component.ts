@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { Router } from '@angular/router';
+import { StoringDataService } from '../storing-data.service';
+
 
 @Component({
   selector: 'app-sign-up',
@@ -13,12 +16,17 @@ export class SignUpComponent {
    //name!:string;
    student = {
     name: 'poonam',
-    age:30
+    age:30,
+    mob:64646464646,
+    city:'mumbai'
    }
-   constructor(private fb: FormBuilder){}
+   constructor(private fb: FormBuilder, 
+            private sDataService : StoringDataService,
+             private router: Router){}
 
     ngOnInit(){
        this.formDef();
+       this.sDataService.studentData =  this.student; //set student obj to service property studentData
     }
 
      formDef(){
@@ -36,7 +44,10 @@ export class SignUpComponent {
 
       submit(){
        console.log(this.signUpForm.value);
-       
+       this.sDataService.userFullName = this.signUpForm.value.fullName;
+       console.log(' this.sDataService.userFullName>>', this.sDataService.userFullName);
+       this.sDataService.listOfUsers = ['poonam','pooja','nitin','shri'];
+       this.router.navigateByUrl('landing');
       }
 
 

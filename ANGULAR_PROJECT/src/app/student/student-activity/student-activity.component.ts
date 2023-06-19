@@ -20,7 +20,7 @@ export class StudentActivityComponent {
 
   showForm(){
      //this.showSignInForm = true;
-     this.showSignInForm = ! this.showSignInForm 
+     this.showSignInForm = ! this.showSignInForm ;
      this.formDef();
   }
 
@@ -30,8 +30,7 @@ export class StudentActivityComponent {
       password:[''],
       confirmPassword:[''],
       name:['',[Validators.required,this.nameValidation,this.whiteSpaceValidator]]
-     }
-     )
+     })
 
   }
   
