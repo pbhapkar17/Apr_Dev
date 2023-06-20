@@ -8,5 +8,11 @@ export class StoringDataService {
   listOfUsers:any
   studentData: any;
   constructor() { }
-
+  
+  whiteSpaceValidator(name:any){
+    let data = name.value;
+    let newdata = data?.trim();
+    let isValid = data.length != newdata.length ;
+    return isValid ? {whiteSpace:true} : null
+  }
 }

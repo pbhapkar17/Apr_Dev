@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup,FormBuilder,Validators } from '@angular/forms';
+import { StudentDataService } from '../student-data.service';
+import { StoringDataService } from 'src/app/storing-data.service';
 
 @Component({
   selector: 'app-student-activity',
@@ -16,7 +18,11 @@ export class StudentActivityComponent {
   pass:any;
   confirmPass:any
   showPassword!:boolean;
-  constructor(private fb: FormBuilder){}
+  studentData:any;
+
+  constructor(private fb: FormBuilder,
+    public studentDataService:StudentDataService,
+    private storingDataService : StoringDataService){}
 
   showForm(){
      //this.showSignInForm = true;
@@ -29,17 +35,12 @@ export class StudentActivityComponent {
     this.sigInForm = this.fb.group({
       password:[''],
       confirmPassword:[''],
-      name:['',[Validators.required,this.nameValidation,this.whiteSpaceValidator]]
+      name:['',[Validators.required,this.nameValidation,this.storingDataService.whiteSpaceValidator]]
      })
 
   }
   
-  whiteSpaceValidator(name:any){
-    let data = name.value;
-    let newdata = data?.trim();
-    let isValid = data.length != newdata.length ;
-    return isValid ? {whiteSpace:true} : null
-  }
+
 
   //copy Copy COPY CoPy COPY.....
   nameValidation(inp:any){
@@ -79,5 +80,13 @@ export class StudentActivityComponent {
   }
   showPass(){
     this.showPassword = !this.showPassword;
+  }
+
+  getData(){
+       this.studentData  = this.studentDataService.studentData;
+       console.log(' this.studentData >>>', this.studentData );
+      let x = this.studentDataService.test(40,50);
+      console.log('x',x);
+      
   }
 }

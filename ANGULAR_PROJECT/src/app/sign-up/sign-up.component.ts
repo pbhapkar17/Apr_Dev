@@ -31,7 +31,8 @@ export class SignUpComponent {
 
      formDef(){
         this.signUpForm = this.fb.group({
-          fullName : ['',[Validators.required, Validators.pattern("[a-zA-Z ]*$"),Validators.minLength(10)]],
+          fullName : ['',[Validators.required, Validators.pattern("[a-zA-Z ]*$"),
+                     Validators.minLength(10),this.sDataService.whiteSpaceValidator]],
           mobNo:['',[Validators.pattern("[0-9]*$"),Validators.minLength(10),Validators.maxLength(10)]],
           email:[],
           userName:[],

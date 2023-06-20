@@ -1,6 +1,6 @@
 
 <button (click)="showForm()">Show Sign In Form</button><br><br>
-
+<button (click)="getData()">GetData</button>
 <form [formGroup]="sigInForm" *ngIf="showSignInForm">
 
     Password : <input [type]="showPassword ? 'text' : 'password' " formControlName="password" (keyup)="password()">

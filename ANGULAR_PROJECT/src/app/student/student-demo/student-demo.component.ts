@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { StudentDataService } from '../student-data.service';
 
 @Component({
   selector: 'app-student-demo',
@@ -7,12 +8,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./student-demo.component.css']
 })
 export class StudentDemoComponent {
-
-  constructor(private router : Router){
+  studentData = {
+    name:'pooja',
+    age:20,
+    class:'firstYear'
+  }
+  constructor(private router : Router,
+    private studentDataService : StudentDataService ){
 
   }
 
   back(){
      this.router.navigateByUrl('landing')
+  }
+
+  setData(){
+       this.studentDataService.studentData = this.studentData;
+       console.log("service's property >>",this.studentDataService.studentData);
+       
+  }
+  serviceFun(){
+   let res = this.studentDataService.test(20,30);
+    console.log('res',res);
+    
   }
 }

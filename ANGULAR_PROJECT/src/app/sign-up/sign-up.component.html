@@ -19,7 +19,12 @@
         && !signUpForm.get('fullName')?.errors?.['pattern']">
            Name must contain 10 Alphabets
         </span>
+        <span class="err" *ngIf="signUpForm.get('fullName')?.errors?.['whiteSpace'] && 
+        !signUpForm.get('fullName')?.errors?.['minlength'] && 
+        !signUpForm.get('fullName')?.errors?.['pattern']">
+            name should not contain white space</span>
         <br><br>
+        
         <label>MobNo</label><br>
         <input type="text" formControlName="mobNo"><br>
         <span *ngIf="!signUpForm.get('mobNo')?.touched">Hint: Enter you Mobile Number</span>
