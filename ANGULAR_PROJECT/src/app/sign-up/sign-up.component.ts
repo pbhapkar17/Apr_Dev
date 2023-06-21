@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Router } from '@angular/router';
 import { StoringDataService } from '../storing-data.service';
+import { StudentDataService } from '../student/student-data.service';
 
 
 @Component({
@@ -20,14 +21,19 @@ export class SignUpComponent {
     mob:64646464646,
     city:'mumbai'
    }
+   data:any;
    constructor(private fb: FormBuilder, 
             private sDataService : StoringDataService,
-             private router: Router){}
+             private router: Router,
+             private studentDataService: StudentDataService){}
 
     ngOnInit(){
        this.formDef();
        this.sDataService.studentData =  this.student; //set student obj to service property studentData
-    }
+        this.data  = this.studentDataService.data;
+        console.log(" this.data  >>", this.data  );
+        
+      }
 
      formDef(){
         this.signUpForm = this.fb.group({

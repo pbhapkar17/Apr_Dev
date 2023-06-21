@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 
 
 
@@ -19,7 +20,8 @@ console.log('app.module.ts file');
     LandingComponent,
     LoginComponent,
     SignUpComponent,
-    DirectivesInAngularComponent, 
+    DirectivesInAngularComponent,
+    LifecyclehooksComponent, 
    
     
   ],

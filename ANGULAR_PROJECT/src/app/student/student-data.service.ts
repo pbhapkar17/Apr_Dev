@@ -7,7 +7,7 @@ export class StudentDataService {
 
   //reusablity of code
    studentData:any;
-
+   data:any;
   constructor() { }
 
    test(a : number, b : number){
