@@ -6,7 +6,8 @@
         <input type="text" formControlName="fullName"><br>
         <span *ngIf="!signUpForm.get('fullName')?.touched 
          && !signUpForm.get('fullName')?.valid
-         && !signUpForm.get('fullName')?.dirty">Hint:Enter Your Full Name here</span>
+         && !signUpForm.get('fullName')?.dirty">Hint:Enter Your Full Name here
+        </span>
         <span class="err" *ngIf="signUpForm.get('fullName')?.errors?.['required'] 
                  && !signUpForm.get('fullName')?.valid
                  && signUpForm.get('fullName')?.touched">

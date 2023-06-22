@@ -5,6 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
 import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 const routes: Routes = [
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path : 'signUp', component : SignUpComponent},
   { path : 'directives', component: DirectivesInAngularComponent},
   { path: 'life cycle hooks', component : LifecyclehooksComponent },
+  { path : 'parent' , component: ParentComponent},
+  { path : 'child', component : ChildComponent},
   { path : 'student', loadChildren:()=>import ('./student/student.module').then(mod=>mod.StudentModule) }
 ];
 

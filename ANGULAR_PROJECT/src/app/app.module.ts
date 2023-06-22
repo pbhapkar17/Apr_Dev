@@ -9,6 +9,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { SharedModule } from './shared/shared.module';
+
 
 
 
@@ -21,16 +25,21 @@ console.log('app.module.ts file');
     LoginComponent,
     SignUpComponent,
     DirectivesInAngularComponent,
-    LifecyclehooksComponent, 
+    LifecyclehooksComponent,
+    ParentComponent,
+    ChildComponent, 
    
     
   ],
   imports: [ //modules
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
+    // FormsModule,
+    // ReactiveFormsModule,
+    SharedModule
+   
   ],
+ 
   providers: [],
   bootstrap: [AppComponent]
 })

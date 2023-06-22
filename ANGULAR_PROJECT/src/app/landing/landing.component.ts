@@ -87,4 +87,7 @@ show(){
 lifeCycleHooks(){
   this.router.navigateByUrl('life cycle hooks');
 }
+parent(){
+  this.router.navigateByUrl('parent');
+}
 }

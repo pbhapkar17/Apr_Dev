@@ -7,6 +7,7 @@ export class StoringDataService {
   userFullName : any;
   listOfUsers:any
   studentData: any;
+  setData!: string;
   constructor() { }
   
   whiteSpaceValidator(name:any){
