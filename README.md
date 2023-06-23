@@ -72,3 +72,5 @@ what are different Data transsmission techniques we have in Angular:
 2.create property or function into service
 3.import service int component(where we want to set or get data to/from service)
 
+parent to child data transfer:
+parent.html >> add selector of child component 

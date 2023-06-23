@@ -4,4 +4,6 @@
 <h3>testing</h3>
 <button (click)="get()">click</button>
 <p>{{data}}</p>
-data from parent {{dataFromParent}}
+Name from Parent : {{dataFromParent}}
+<br>
+surname: <input type="text" (keyup)="sendData($event)"  >

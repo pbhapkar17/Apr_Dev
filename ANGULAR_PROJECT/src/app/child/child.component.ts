@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output  } from '@angular/core';
 import { StoringDataService } from '../storing-data.service';
 
 @Component({
@@ -8,7 +8,8 @@ import { StoringDataService } from '../storing-data.service';
 })
 export class ChildComponent {
   data!: string;
-  @Input() dataFromParent:any;
+ @Input() dataFromParent :any;
+ @Output() dataFromChild = new EventEmitter <any>;
 
   constructor(public storingDataService : StoringDataService){
 
@@ -16,6 +17,11 @@ export class ChildComponent {
   get(){
     this.data = this.storingDataService.setData;
     console.log('data',this.data);
-    
-  }
+     }
+
+     sendData(data : any){
+     console.log(data.target.value);
+     let value = data.target.value;
+     this.dataFromChild.emit(value);
+     }
 }

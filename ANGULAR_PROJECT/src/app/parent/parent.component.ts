@@ -9,7 +9,8 @@ import { StoringDataService } from '../storing-data.service';
 export class ParentComponent {
 
   parentData:any;
-
+  name:any="";
+  valueFromChild:any;
   constructor(public storingDataService : StoringDataService){
 
   }
@@ -17,5 +18,10 @@ export class ParentComponent {
   set(){
   this.storingDataService.setData = "poonam";
   }
-  
+  getData(value : any){
+    console.log(value);
+    this.valueFromChild = value;
+    
+  }
+
 }
