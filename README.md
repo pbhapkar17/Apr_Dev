@@ -74,3 +74,20 @@ what are different Data transsmission techniques we have in Angular:
 
 parent to child data transfer:
 parent.html >> add selector of child component 
+
+
+How to install bootstrap:
+(https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application/)
+
+1. npm install @ng-bootstrap/ng-bootstrap@next
+2.angular.json:
+ "styles": [
+  "node_modules/bootstrap/scss/bootstrap.scss",
+  "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+  "src/styles.scss"
+],
+"scripts": [
+  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+]
+
+material install: ng add @angular/material

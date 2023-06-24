@@ -20,7 +20,8 @@ console.log('student module');
     StudentRoutingModule,
     // FormsModule,
     // ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    
   ],
  
 })

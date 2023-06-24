@@ -19,7 +19,7 @@ export class StudentActivityComponent {
   confirmPass:any
   showPassword!:boolean;
   studentData:any;
-
+  strongPassword :any;
   constructor(private fb: FormBuilder,
     public studentDataService:StudentDataService,
     private storingDataService : StoringDataService){}
@@ -50,34 +50,32 @@ export class StudentActivityComponent {
     return isErr ? {Err : true}: null;
   }
 
-
-  passwordValidatior(inp:any){
-    console.log(inp.value);
-    console.log(this.pass);
-   
-
-
-  }
+  //password fun will trigger on every keyup
+  //this.passValue will get update on every keyup
   password() {
-
     this.passwordValue = this.sigInForm.value.password;
     if (this.passwordValue == this.confirmPassValue) {
-      this.isMatch = true;
+      this.isMatch = false;
     }
     else {
-      this.isMatch = false;
+      this.isMatch = true;
+    }
+    let pasLength = this.passwordValue.length;
+    if(pasLength > 10){
+      this.strongPassword =true;
     }
   }
 
   confirmPassword() {
     this.confirmPassValue = this.sigInForm.value.confirmPassword;
     if (this.passwordValue == this.confirmPassValue) {
-      this.isMatch = true;
-    }
-    else {
       this.isMatch = false;
     }
+    else {
+      this.isMatch = true;
+    }
   }
+  
   showPass(){
     this.showPassword = !this.showPassword;
   }

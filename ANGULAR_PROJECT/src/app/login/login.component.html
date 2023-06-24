@@ -10,7 +10,7 @@
         <input type="text" ngModel class="inp-box" name="fName" 
            #fullName='ngModel' pattern="[a-zA-Z ]*$" required
             minlength="5" maxlength="70"><br>
-    
+    <!-- poona m pati l -->
         <span class="span-err" *ngIf="fullName.errors?.['pattern'] && fullName.touched ">
             Please Enter Alphabets Only
         </span>
@@ -23,7 +23,8 @@
         <!-- PooNam$6767  keup, keypress,focusIn F-->
         <input type="text" class="inp-pass" ngModel name="pass" #password="ngModel" minlength="8"
             pattern="[A-Z]{2}[a-zA-Z0-9@#!$%&^*]{9}$" ><br>
-        
+        <!--POON@4545 [A-Z]{4}[@]{1}[0-9]{4} 
+            CTGPP3424P [A-Z]{4}[P]{1}[0-9]{4}[A-Z]{1}-->
         <span *ngIf="password.errors?.['minlength']" class="span-err">
             Password should contain atleast 8 charachters
         </span>

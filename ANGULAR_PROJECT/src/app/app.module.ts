@@ -36,7 +36,8 @@ console.log('app.module.ts file');
     AppRoutingModule,
     // FormsModule,
     // ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+  
    
   ],
  
