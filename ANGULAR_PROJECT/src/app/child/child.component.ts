@@ -9,9 +9,13 @@ import { StoringDataService } from '../storing-data.service';
 export class ChildComponent {
   data!: string;
  @Input() dataFromParent :any;
+ @Input() parentsDataName :any;
  @Output() dataFromChild = new EventEmitter <any>;
-
+ @Output() surName = new EventEmitter <any>
   constructor(public storingDataService : StoringDataService){
+
+  }
+  ngOnInit(){
 
   }
   get(){
@@ -19,9 +23,15 @@ export class ChildComponent {
     console.log('data',this.data);
      }
 
-     sendData(data : any){
-     console.log(data.target.value);
-     let value = data.target.value;
-     this.dataFromChild.emit(value);
+     sendData(data? : any){
+      let sName = 'Patil';
+      this.surName.emit(sName);
+    
+      if(data){
+        console.log(data.target.value);
+        let value = data.target.value;
+        this.dataFromChild.emit(value);
+      }
+ 
      }
 }

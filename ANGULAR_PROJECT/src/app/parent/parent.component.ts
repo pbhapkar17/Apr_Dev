@@ -9,8 +9,10 @@ import { StoringDataService } from '../storing-data.service';
 export class ParentComponent {
 
   parentData:any;
-  name:any="";
+  name:any;
   valueFromChild:any;
+  parentName = 'poonam';
+  surName:any;
   constructor(public storingDataService : StoringDataService){
 
   }
@@ -22,6 +24,10 @@ export class ParentComponent {
     console.log(value);
     this.valueFromChild = value;
     
+  }
+  surname(surName:any){
+    console.log(surName);
+    this.surName = surName;
   }
 
 }

@@ -73,8 +73,21 @@ what are different Data transsmission techniques we have in Angular:
 3.import service int component(where we want to set or get data to/from service)
 
 parent to child data transfer:
-parent.html >> add selector of child component 
+parent.html >> 1. add selector of child component 
+2.declare property in child component with @Input() decorator,import Input class
+( @Input():property we can use beyond component)
+3.create one local property in parent.ts file bind it to ngModel if we want data to be transfered from parent's input box to the child component.
+or create one local property with some harcoded value which u want to pass to the child component.
+4.bind child component's property to the selector using proprty binding symbol and bind local property to it which data we need to pass to the child compo.
 
+
+child to parent:
+1.add property in child component having prefix @Output Decorator.which is of eventEmmiter type.
+2.trigger function on every keyup from DOM and trigger event from function using emit method.
+3.pass value of input box as parameter/argument to the parent component.
+4.In parent component's .html file add event coming from child and bind function to it
+5.every time whenever event is emitting from child automatic event is triggering in parent component and hence function will get called by taking value from child.
+  
 
 How to install bootstrap:
 (https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application/)

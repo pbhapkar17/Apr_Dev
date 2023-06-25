@@ -32,4 +32,16 @@ export class StudentDemoComponent {
     console.log('res',res);
     
   }
+  keyUpEvent(event:any){
+    console.log(event);
+    
+  }
+  blur(){
+    console.log('blur');
+    
+  }
+  focus(){
+    console.log('focus');
+    
+  }
 }
