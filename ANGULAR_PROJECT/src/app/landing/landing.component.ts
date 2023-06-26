@@ -50,13 +50,19 @@ export class LandingComponent {
   ){  //di-dependancy Injection
 
  }
+ ngOnChanges(){
+  console.log('OnChanges');
+  
+}
   ngOnInit(){
+    console.log('oninit');
+    
    this.userName = this.sDataService.userFullName;
    console.log('  this.userName>>>',  this.userName);
    this.list = this.sDataService.listOfUsers;
   //setting json data to service
     this.studentDataService.data = this.jsonData ;
-   
+    this.show()
   }
  
  login(){    //functions , lifecycle hooks
@@ -64,6 +70,7 @@ export class LandingComponent {
     this.router.navigateByUrl('/login');
   }
   studentActivity(){
+    this.login()
     this.router.navigateByUrl('student/studentActivity');
   }
   directives(){
@@ -89,5 +96,8 @@ lifeCycleHooks(){
 }
 parent(){
   this.router.navigateByUrl('parent');
+}
+child(){
+  this.router.navigateByUrl('child');
 }
 }

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output  } from '@angular/core';
 import { StoringDataService } from '../storing-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-child',
@@ -12,11 +13,33 @@ export class ChildComponent {
  @Input() parentsDataName :any;
  @Output() dataFromChild = new EventEmitter <any>;
  @Output() surName = new EventEmitter <any>
-  constructor(public storingDataService : StoringDataService){
+  constructor(public storingDataService : StoringDataService,private router: Router){
 
   }
+  ngOnChanges(){
+    console.log('OnChanges');
+  }
   ngOnInit(){
-
+   console.log('ngOninit');
+  
+  }
+  ngDoCheck(){
+    console.log('ngDoCheck');
+  }
+  ngAfterContentInit(){
+    console.log('ngAfterContentInit');
+  }
+  ngAfterContentChecked(){
+    console.log('ngAfterContetChecked');
+  }
+  ngAfterViewInit(){
+    console.log('ngAfterViewInit');
+  }
+  ngAfterViewChecked(){
+    console.log('ngAfterViewChecked');
+  }
+  ngOnDestroy(){
+    console.log('ngOnDestroy');
   }
   get(){
     this.data = this.storingDataService.setData;
@@ -33,5 +56,8 @@ export class ChildComponent {
         this.dataFromChild.emit(value);
       }
  
+     }
+     back(){
+      this.router.navigateByUrl('landing')
      }
 }
