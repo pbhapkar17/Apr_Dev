@@ -6,13 +6,15 @@ import { StudentActivityComponent } from './student-activity/student-activity.co
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
-
+import { ApicallComponent } from './apicall/apicall.component';
+//import { HttpClientModule} from '@angular/common/http';
 console.log('student module');
 
 
 @NgModule({
   declarations: [
     StudentActivityComponent,
+    ApicallComponent,
    // StudentDemoComponent
   ],
   imports: [
@@ -21,6 +23,7 @@ console.log('student module');
     // FormsModule,
     // ReactiveFormsModule,
     SharedModule,
+   // HttpClientModule
     
   ],
  

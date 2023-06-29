@@ -40,5 +40,7 @@ export class AppComponent {
   test(){
     console.log(this.twoWayBindingTest);
   }
+  //CURD: Create/POST , Update/PUT/PATCH , Read/GET , Delete/DELETE
+   //API :Application Programming Interface (mediator)
 }
 

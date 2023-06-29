@@ -1,0 +1,39 @@
+{
+  "admin": [
+    {
+      "title": "test",
+      "author": "me",
+      "name": "Ajit",
+      "address": "Mumbai",
+      "id": 1
+    },
+    {
+      "fullName": "poonam Bhapkar",
+      "mobNo": "",
+      "email": "poonambhapkar34@gmail.com",
+      "userName": null,
+      "city": "Mumbai",
+      "address": "mumbai",
+      "gender": "Female",
+      "id": 2
+    }
+  ],
+  "owner": [
+    {
+      "title": "harry potter",
+      "author": "me",
+      "name": "Ajay",
+      "address": "Pune",
+      "id": 1
+    }
+  ],
+  "student": [
+    {
+      "title": "test",
+      "author": "me",
+      "name": "pooja",
+      "address": "Pune",
+      "id": 1
+    }
+  ]
+}

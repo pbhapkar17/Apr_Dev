@@ -100,4 +100,7 @@ parent(){
 child(){
   this.router.navigateByUrl('child');
 }
+apicall(){
+  this.router.navigateByUrl('student/apiCall')
+}
 }

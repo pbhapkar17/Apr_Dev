@@ -12,6 +12,7 @@ import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.compone
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { SharedModule } from './shared/shared.module';
+//import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -37,6 +38,7 @@ console.log('app.module.ts file');
     // FormsModule,
     // ReactiveFormsModule,
     SharedModule,
+    //HttpClientModule
   
    
   ],

@@ -104,3 +104,6 @@ How to install bootstrap:
 ]
 
 material install: ng add @angular/material
+
+To make API call steps:
+1. import HttpClientModule to the module.ts file
