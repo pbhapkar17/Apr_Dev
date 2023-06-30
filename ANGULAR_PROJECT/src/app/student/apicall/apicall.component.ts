@@ -11,6 +11,8 @@ import { CommonApiCallService } from '../common-api-call.service';
 export class ApicallComponent {
   signUpForm! :FormGroup;
   postApiResponse: any;
+  studentName:any;
+
   constructor(private fb: FormBuilder, private sDataService : StoringDataService, 
     private ApiCallService:CommonApiCallService ){}
 
@@ -32,8 +34,24 @@ export class ApicallComponent {
   }
   submit(){
     console.log(this.signUpForm.value);
-    this.ApiCallService.postApiCall(this.signUpForm.value).subscribe(response =>{
+    let endpoint = 'admin';
+    this.ApiCallService.postApiCall(endpoint,this.signUpForm.value).subscribe(response =>{
     this.postApiResponse = response;
     })
   }
+
+  inputBox(){
+   console.log(this.studentName);
+   let reqData = {
+    "studentName" : this.studentName
+   }
+   let urlEndPoint = "studentname";
+   if(this.studentName.length > 2){
+    this.ApiCallService.postApiCall(urlEndPoint,reqData).subscribe(resp => {
+      console.log(resp);  
+     })
+    }
+
+   }
+
 }

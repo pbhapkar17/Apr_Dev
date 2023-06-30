@@ -16,6 +16,56 @@
       "address": "mumbai",
       "gender": "Female",
       "id": 2
+    },
+    {
+      "fullName": "poonam Bhapkar",
+      "mobNo": "5166626622",
+      "email": "poonambhapkar34@gmail.com",
+      "userName": null,
+      "city": "Mumbai",
+      "address": "mumbai",
+      "gender": "Female",
+      "id": 3
+    },
+    {
+      "fullName": "poonam Bhapkar",
+      "mobNo": "5166626622",
+      "email": "poonambhapkar34@gmail.com",
+      "userName": null,
+      "city": "Mumbai",
+      "address": "mumbai",
+      "gender": "Female",
+      "id": 4
+    },
+    {
+      "fullName": "avdhoot jadhav",
+      "mobNo": "",
+      "email": "poonambhapkar34@gmail.com",
+      "userName": null,
+      "city": "Mumbai",
+      "address": "mumbai",
+      "gender": "Female",
+      "id": 5
+    },
+    {
+      "fullName": "avdhoot jadhav",
+      "mobNo": "2222222222",
+      "email": "poonambhapkar34@gmail.com",
+      "userName": "xxxxx",
+      "city": "Mumbai",
+      "address": "mumbai",
+      "gender": "Male",
+      "id": 6
+    },
+    {
+      "fullName": "shreedhar jadhav",
+      "mobNo": "2222222222",
+      "email": "poonambhapkar34@gmail.com",
+      "userName": "xxxxx",
+      "city": "Mumbai",
+      "address": "mumbai",
+      "gender": "Male",
+      "id": 7
     }
   ],
   "owner": [
@@ -34,6 +84,19 @@
       "name": "pooja",
       "address": "Pune",
       "id": 1
+    }
+  ],
+  "studentname": [
+    {
+      "id": 1
+    },
+    {
+      "studentName": "pooja",
+      "id": 2
+    },
+    {
+      "studentName": "Nisha",
+      "id": 3
     }
   ]
 }

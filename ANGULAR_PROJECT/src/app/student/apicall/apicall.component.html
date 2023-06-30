@@ -60,4 +60,11 @@
         <br><br>
         <button [disabled]="!signUpForm.valid"  (click)="submit()"> Submit </button>
     </form>
+   
+</div><br><br>
+
+<div class="stdname">
+ Enter student Name : <input type="text" [(ngModel)]="studentName" (blur)="inputBox()">
 </div>
+
+<br><br><br><br>

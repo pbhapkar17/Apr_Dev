@@ -107,3 +107,9 @@ material install: ng add @angular/material
 
 To make API call steps:
 1. import HttpClientModule to the module.ts file
+2. import HttpClient into service and inject its dependency into the constructor
+(using reference property we need to call API methods)
+3.import apiicall service, inject dependancy into the component where we need to call API.
+4.create function having API method into the service
+
+5.on submit button write code to make API call from service using function which we have created in the service
