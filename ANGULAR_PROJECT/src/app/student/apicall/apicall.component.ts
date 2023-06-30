@@ -10,7 +10,11 @@ import { CommonApiCallService } from '../common-api-call.service';
 })
 export class ApicallComponent {
   signUpForm! :FormGroup;
-  postApiResponse: any;
+   postApiResponse =  {
+    statusCode:1000,
+    status:"Success",
+    massage:"Data SUbmitted Successfuly"
+    }
   studentName:any;
 
   constructor(private fb: FormBuilder, private sDataService : StoringDataService, 
@@ -36,8 +40,17 @@ export class ApicallComponent {
     console.log(this.signUpForm.value);
     let endpoint = 'admin';
     this.ApiCallService.postApiCall(endpoint,this.signUpForm.value).subscribe(response =>{
-    this.postApiResponse = response;
+  
     })
+   // this.postApiResponse ={
+   // "statusCode":1000,
+  // "status":"Success",
+  // "massage":"Data SUbmitted Successfuly"
+  //  }
+    if(this.postApiResponse.statusCode ==1000){
+       alert(this.postApiResponse.massage);
+      this.signUpForm.reset();
+    }
   }
 
   inputBox(){
