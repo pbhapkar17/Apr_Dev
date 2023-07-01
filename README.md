@@ -113,3 +113,43 @@ To make API call steps:
 4.create function having API method into the service
 
 5.on submit button write code to make API call from service using function which we have created in the service
+
+
+get API CALL
+1.create button in any compo bind one fuction on click event check function is getting called on click on button
+2.go to the any service from where u want to make API call, check wheather HttpClient class is imported and DI in constructor or not,if not then have to import and DI it.
+3.go to module.ts file or shared module.ts file check HttpClientModule is imported to the module or not.if not then have to import it,update import section..
+
+
+
+When making API calls in Angular 10, you typically follow these steps:
+
+Import the required dependencies: In your component or service file, import the necessary dependencies from Angular's HTTP module. This includes HttpClient for sending HTTP requests and HttpHeaders for setting request headers.
+typescript
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+Inject the HttpClient dependency: In the constructor of your component or service, inject the HttpClient dependency.
+typescript
+constructor(private http: HttpClient) { }
+Define the API endpoint: Set the URL of the API endpoint you want to call.
+typescript
+const apiUrl = 'https://api.example.com/users';
+Make the API call: Use the HttpClient instance to make the API call. You can choose between different HTTP methods such as GET, POST, PUT, DELETE, etc. Here's an example of making a GET request:
+typescript
+this.http.get(apiUrl).subscribe(
+  (response) => {
+    // Handle the response data
+  },
+  (error) => {
+    // Handle any errors
+  }
+);
+Handle the response: In the success callback of the subscribe() method, you can handle the response returned by the API. This may include parsing and processing the data received from the server.
+
+Handle errors: In the error callback of the subscribe() method, you can handle any errors that occur during the API call. This can involve displaying error messages to the user or taking appropriate action based on the error.
+
+Optional: Add request headers or parameters: If required, you can set additional request headers or parameters using the HttpHeaders class.
+
+typescript
+const headers = new HttpHeaders().set('Authorization', 'Bearer your_token');
+this.http.get(apiUrl, { headers }).subscribe(/* ... */);
+These steps provide a basic outline for making API calls in Angular 10. Depending on your requirements, you may need to include additional logic for handling authentication, handling response transformations, or working with observables and operators to manage asynchronous data flow.
