@@ -69,7 +69,7 @@ export class LandingComponent {
   }
  
  login(){    //functions , lifecycle hooks
-  
+     this.sDataService.myName = 'poonam';
     this.router.navigateByUrl('/login');
   }
   studentActivity(){

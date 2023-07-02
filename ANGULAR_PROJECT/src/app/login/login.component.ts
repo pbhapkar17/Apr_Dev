@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { StoringDataService } from '../storing-data.service';
 
 @Component({
   selector: 'app-login',
@@ -8,8 +9,14 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   gender ='male'
-    constructor(private router:Router){
+    constructor(private router:Router, public storingDataService: StoringDataService){
 
+    }
+
+    ngOnInit(){ 
+     let a = this.storingDataService.myName;
+     console.log(a);
+   
     }
 
   back(){

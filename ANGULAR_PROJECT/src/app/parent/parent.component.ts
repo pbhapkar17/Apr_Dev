@@ -13,6 +13,7 @@ export class ParentComponent {
   valueFromChild:any;
   parentName = 'poonam';
   surName:any;
+ // $test:any;not getting used
   constructor(public storingDataService : StoringDataService){
 
   }

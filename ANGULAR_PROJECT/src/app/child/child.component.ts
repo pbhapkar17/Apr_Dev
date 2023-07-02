@@ -13,35 +13,42 @@ export class ChildComponent {
  @Input() parentsDataName :any;
  @Output() dataFromChild = new EventEmitter <any>;
  @Output() surName = new EventEmitter <any>
+
   constructor(public storingDataService : StoringDataService,private router: Router){
 
   }
+
   ngOnChanges(){
+    //repeatadly
     console.log('OnChanges');
   }
   ngOnInit(){
    console.log('ngOninit');
-  
   }
   ngDoCheck(){
+    //repeatedaly
     console.log('ngDoCheck');
   }
   ngAfterContentInit(){
     console.log('ngAfterContentInit');
   }
   ngAfterContentChecked(){
+    //rp
     console.log('ngAfterContetChecked');
   }
   ngAfterViewInit(){
+    //once
     console.log('ngAfterViewInit');
   }
   ngAfterViewChecked(){
+    //rp
     console.log('ngAfterViewChecked');
   }
   ngOnDestroy(){
+    //once
     console.log('ngOnDestroy');
   }
-  get(){
+    get(){
     this.data = this.storingDataService.setData;
     console.log('data',this.data);
      }
