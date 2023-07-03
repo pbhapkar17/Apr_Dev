@@ -115,4 +115,7 @@ getApiCall(){
   console.log(" this.getApiResponse", this.getApiResponse);
   
 }
+form(){
+  this.router.navigateByUrl('form');
+}
 }

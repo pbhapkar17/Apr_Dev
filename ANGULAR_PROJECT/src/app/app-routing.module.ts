@@ -7,6 +7,7 @@ import { DirectivesInAngularComponent } from './directives-in-angular/directives
 import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { FormComponent } from './form/form.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'life cycle hooks', component : LifecyclehooksComponent },
   { path : 'parent' , component: ParentComponent},
   { path : 'child', component : ChildComponent},
+  { path:'form', component: FormComponent},
   { path : 'student', loadChildren:()=>import ('./student/student.module').then(mod=>mod.StudentModule) }
 ];
 
