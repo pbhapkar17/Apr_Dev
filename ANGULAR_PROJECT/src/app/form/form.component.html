@@ -7,3 +7,17 @@
 
     <button (click)="save()">Save</button>
 </form>
+
+<div *ngIf = "adminData" class="table-container">
+    <table>
+     <tr>
+        <th *ngFor ="let heading of tableHeading"> {{heading}} </th>
+     </tr>
+     <tr *ngFor ="let tableData of adminData">
+        <td>{{tableData.fullName}}</td>
+        <td>{{tableData.mobNo}}</td>
+        <td>{{tableData.city}}</td>
+        <td>{{tableData.email}}</td>
+     </tr>
+    </table>
+</div>

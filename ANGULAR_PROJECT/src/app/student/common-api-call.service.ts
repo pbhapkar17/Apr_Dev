@@ -21,13 +21,18 @@ export class CommonApiCallService {
   //    return this.httpClient.post(this.studentNameUrl,data);
   // }
   
+  //post API : to store data into db
     postApiCall(endpoint:string, data:any){
       //post method: 2 para: form url and form Data
       let apiUrl = this.url + endpoint;
       return  this.httpClient.post(apiUrl,data)
     }
+
+    //to get data from db
     getApiCall(enpoint:any){
-      let url = this.url + enpoint;
+      let url = this.url + enpoint; 
+      //http://localhost:3000/ + admin 
+      //http://localhost:3000/admin
       return this.httpClient.get(url);
     }
 }

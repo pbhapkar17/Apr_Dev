@@ -1,13 +1,6 @@
 {
   "admin": [
     {
-      "title": "test",
-      "author": "me",
-      "name": "Ajit",
-      "address": "Mumbai",
-      "id": 1
-    },
-    {
       "fullName": "poonam Bhapkar",
       "mobNo": "",
       "email": "poonambhapkar34@gmail.com",
