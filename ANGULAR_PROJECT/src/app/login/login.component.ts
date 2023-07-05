@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { StoringDataService } from '../storing-data.service';
+import { CommonApiCallService } from '../student/common-api-call.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,8 @@ import { StoringDataService } from '../storing-data.service';
 })
 export class LoginComponent {
   gender ='male'
-    constructor(private router:Router, public storingDataService: StoringDataService){
+    constructor(private router:Router, public storingDataService: StoringDataService,
+      private commonApiCallService: CommonApiCallService){
 
     }
 
@@ -25,7 +27,19 @@ export class LoginComponent {
 
   submit(formData:any){
     console.log(formData);
-    
+    let requestData = {
+      fullName : formData.fName,
+      password : formData.pass,
+      confirmPassword : formData.confirmPassword,
+      gender : formData.gender
+    }
+
+    let endpoint = "owner";
+
+    this.commonApiCallService.postApiCall(endpoint,requestData).subscribe(res=>{
+      console.log(res);
+      
+    })
   }
   password(passwordValue:any){
    console.log(passwordValue);

@@ -35,4 +35,11 @@ export class CommonApiCallService {
       //http://localhost:3000/admin
       return this.httpClient.get(url);
     }
+
+    //getById
+    getById(id:any, endPoint:string){
+      let url = this.url + endPoint + '/' + id
+      //http://localhost:3000/admin/2
+    return this.httpClient.get(url);
+    }
 }

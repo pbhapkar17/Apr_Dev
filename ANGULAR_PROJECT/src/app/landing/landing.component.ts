@@ -45,7 +45,7 @@ export class LandingComponent {
     massage: "success"
   };
   getApiResponse: any;
-
+  getByIdData:any;
  constructor( private router : Router,
    private sDataService: StoringDataService,
    private studentDataService : StudentDataService,
@@ -117,5 +117,12 @@ getApiCall(){
 }
 form(){
   this.router.navigateByUrl('form');
+}
+getById(){
+  this.commonApiCallService.getById(4,'admin').subscribe(res=>{
+     this.getByIdData = res;
+     console.log(res);
+     
+  })
 }
 }

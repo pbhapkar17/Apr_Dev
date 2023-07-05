@@ -128,6 +128,28 @@
       "name": "Ajay",
       "address": "Pune",
       "id": 1
+    },
+    {
+      "fullName": "poonamdfff",
+      "password": "PL64667r865",
+      "confirmPassword": "PL64667r865",
+      "gender": "Female",
+      "id": 2
+    },
+    
+    {
+      "fullName": "poonam",
+      "password": "PL997878567",
+      "confirmPassword": "POoonam1233",
+      "gender": "Female",
+      "id": 4
+    },
+    {
+      "fullName": "poonam",
+      "password": "PL997878567",
+      "confirmPassword": "POoonam1233",
+      "gender": "Female",
+      "id": 5
     }
   ],
   "student": [
