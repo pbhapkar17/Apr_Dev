@@ -29,17 +29,24 @@ export class CommonApiCallService {
     }
 
     //to get data from db
-    getApiCall(enpoint:any){
-      let url = this.url + enpoint; 
+    getApiCall(endPoint:any , id? : any ){
+      //statment condition true ? part1 : prt2
+     // 6 < 10 ? true  : false
+      let url = id ? this.url + endPoint + '/' + id : this.url + endPoint ; 
       //http://localhost:3000/ + admin 
       //http://localhost:3000/admin
       return this.httpClient.get(url);
     }
 
     //getById
-    getById(id:any, endPoint:string){
-      let url = this.url + endPoint + '/' + id
-      //http://localhost:3000/admin/2
-    return this.httpClient.get(url);
+    // getById(id:any, endPoint:string){
+    //   let url = 
+    //   //http://localhost:3000/admin/4
+    //   return this.httpClient.get(url);
+    // }
+
+    deletApiCall(endPoint:string , id : any){
+      let url = this.url + endPoint + '/' + id;
+          return  this.httpClient.delete(url);
     }
 }

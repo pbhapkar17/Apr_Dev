@@ -119,10 +119,20 @@ form(){
   this.router.navigateByUrl('form');
 }
 getById(){
-  this.commonApiCallService.getById(4,'admin').subscribe(res=>{
-     this.getByIdData = res;
-     console.log(res);
+  //api id
+  // this.commonApiCallService.getById(4,'admin').subscribe(res=>{
+  //    this.getByIdData = res;
+  //    console.log(res);
      
+  // })
+  this.commonApiCallService.getApiCall('admin',3).subscribe(response =>{
+    console.log(response);
   })
+}
+delete(){
+   this.commonApiCallService.deletApiCall('admin',2).subscribe(resp=>{
+    console.log('delet respo', resp);
+    
+   })
 }
 }
