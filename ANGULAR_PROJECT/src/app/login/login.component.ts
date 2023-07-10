@@ -27,6 +27,7 @@ export class LoginComponent {
 
   submit(formData:any){
     console.log(formData);
+    
     let requestData = {
       fullName : formData.fName,
       password : formData.pass,

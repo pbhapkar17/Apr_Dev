@@ -46,6 +46,7 @@ export class LandingComponent {
   };
   getApiResponse: any;
   getByIdData:any;
+  data: any;
  constructor( private router : Router,
    private sDataService: StoringDataService,
    private studentDataService : StudentDataService,
@@ -134,5 +135,18 @@ delete(){
     console.log('delet respo', resp);
     
    })
+}
+
+updateDetails(){
+  this.commonApiCallService.journey = "update"
+  this.commonApiCallService.getApiCall('admin','14').subscribe(response=>{
+    this.data= response;
+  });
+
+  if(this.data){
+    this.commonApiCallService.getDataById = this.data;
+    this.router.navigateByUrl('signUp')
+  }
+ 
 }
 }

@@ -53,8 +53,8 @@
     {
       "fullName": "shreedhar jadhav",
       "mobNo": "2222222222",
-      "email": "poonambhapkar34@gmail.com",
-      "userName": "xxxxx",
+      "email": "shreedhar@gmail.com",
+      "userName": "shreedhar",
       "city": "Mumbai",
       "address": "mumbai",
       "gender": "Male",
@@ -119,6 +119,42 @@
       "address": "mumbai",
       "gender": "Male",
       "id": 13
+    },
+    {
+      "fullName": "Tanish Jadhav",
+      "mobNo": "6666666666",
+      "email": "tanish@gmail.com",
+      "userName": "Tanish",
+      "city": "Nagpur",
+      "address": "mumbai",
+      "gender": "Male",
+      "password": "Tanish$34",
+      "confirmPassword": "Tanish$34",
+      "id": 14
+    },
+    {
+      "fullName": "Hari Jadhav",
+      "mobNo": "9898989898",
+      "email": "Hari@gmail.com",
+      "userName": "Hari",
+      "city": "Mumbai",
+      "address": "mumbai",
+      "gender": "Male",
+      "password": "Hari$34",
+      "confirmPassword": "Hari$34",
+      "id": 14
+    },
+    {
+      "fullName": "Tani Jadhav",
+      "mobNo": "9999999999",
+      "email": "tanish@gmail.com",
+      "userName": "Tanish",
+      "city": "nashik",
+      "address": "mumbai",
+      "gender": "Male",
+      "password": "Tanish$34",
+      "confirmPassword": "Tanish$34",
+      "id": 15
     }
   ],
   "owner": [
