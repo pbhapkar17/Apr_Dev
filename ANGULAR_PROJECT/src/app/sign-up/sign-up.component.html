@@ -3,7 +3,8 @@
     <form class="signup-form-container" [formGroup]="signUpForm">
 
         <label>Name</label><br>
-        <input type="text" formControlName="fullName"><br>
+        <!-- [a-zA-Z ] -->
+        <input type="text" formControlName="fullName" appCharOnly maxlength="20"><br>
         <span *ngIf="!signUpForm.get('fullName')?.touched 
          && !signUpForm.get('fullName')?.valid
          && !signUpForm.get('fullName')?.dirty">Hint:Enter Your Full Name here
@@ -46,7 +47,7 @@
         <input type="radio" value="Male"  formControlName="gender"> Male <br><br>
        
         <label>City</label><br>
-        <input type="text" formControlName="city"><br><br>
+        <input type="text" formControlName="city" appCharOnly><br><br>
 
         <label>Email Id</label><br>
         <input type="text" formControlName="email"><br>

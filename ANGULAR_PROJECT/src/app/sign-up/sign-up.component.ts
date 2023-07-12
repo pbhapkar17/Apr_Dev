@@ -46,16 +46,16 @@ export class SignUpComponent {
 
      formDef(){
         this.signUpForm = this.fb.group({
-          fullName : [this.getDataById.fullName ? this.getDataById.fullName : '',[Validators.required, Validators.pattern("[a-zA-Z ]*$"),
+          fullName : [this.getDataById?.fullName ? this.getDataById.fullName : '',[Validators.required, Validators.pattern("[a-zA-Z ]*$"),
                      Validators.minLength(10),this.sDataService.whiteSpaceValidator]],
-          mobNo:[this.getDataById.mobNo ? this.getDataById.mobNo : '',[Validators.pattern("[0-9]*$"),Validators.minLength(10),Validators.maxLength(10)]],
-          email:[this.getDataById.email ? this.getDataById.email : ''],
-          userName:[this.getDataById.userName ? this.getDataById.userName : ''],
-          city:[this.getDataById.city ? this.getDataById.city : ''],
-          address:[this.getDataById.address ? this.getDataById.address : ''],
-          gender:[this.getDataById.gender ? this.getDataById.gender : ''],
-          password:[this.getDataById.password ? this.getDataById.password : ''],
-          confirmPassword:[this.getDataById.confirmPassword ? this.getDataById.confirmPassword : '']
+          mobNo:[this.getDataById?.mobNo ? this.getDataById.mobNo : '',[Validators.pattern("[0-9]*$"),Validators.minLength(10),Validators.maxLength(10)]],
+          email:[this.getDataById?.email ? this.getDataById.email : ''],
+          userName:[this.getDataById?.userName ? this.getDataById.userName : ''],
+          city:[this.getDataById?.city ? this.getDataById.city : ''],
+          address:[this.getDataById?.address ? this.getDataById.address : ''],
+          gender:[this.getDataById?.gender ? this.getDataById.gender : ''],
+          password:[this.getDataById?.password ? this.getDataById.password : ''],
+          confirmPassword:[this.getDataById?.confirmPassword ? this.getDataById.confirmPassword : '']
         })
 
       }

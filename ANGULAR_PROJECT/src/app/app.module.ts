@@ -12,6 +12,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { SharedModule } from './shared/shared.module';
 import { FormComponent } from './form/form.component';
+import { CharOnlyDirective } from './char-only.directive';
 //import { HttpClientModule } from '@angular/common/http';
 
 
@@ -29,7 +30,8 @@ console.log('app.module.ts file');
     LifecyclehooksComponent,
     ParentComponent,
     ChildComponent,
-    FormComponent, 
+    FormComponent,
+    CharOnlyDirective, 
    
     
   ],
