@@ -6,14 +6,17 @@
     <input type="text" formControlName="mobileNo"><br><br>
 
     <button (click)="save()">Save</button>
-</form>
+</form><br><br>
 
+<div>
+    <input type="text" [(ngModel)]="searchBoxVal">Search here
+</div>
 <div *ngIf = "adminData" class="table-container">
     <table>
      <tr>
         <th *ngFor ="let heading of tableHeading"> {{heading}} </th>
      </tr>
-     <tr *ngFor ="let tableData of adminData">
+     <tr *ngFor ="let tableData of adminData | filter : searchBoxVal">
         <td>{{tableData.fullName}}</td>
         <td>{{tableData.mobNo}}</td>
         <td>{{tableData.city}}</td>
@@ -21,3 +24,17 @@
      </tr>
     </table>
 </div>
+<br><br>
+
+<div>
+    {{myName | uppercase }} <br>
+    {{myName | lowercase }}
+</div>
+
+<div>
+    {{todayDate}} <br>
+    {{todayDate | date }} <br>
+    {{todayDate | date:'shortDate' }} <br>
+    {{todayDate | date:'fullDate' }} (IST)
+</div>
+<br><br><br>

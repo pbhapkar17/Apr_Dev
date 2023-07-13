@@ -12,11 +12,14 @@ export class FormComponent {
    form! : FormGroup;
    adminData:any;
    tableHeading : any[]= ['Full Name', "Mobile Number", "City", "Email"];
+   myName = 'poonam';
    constructor(private fb : FormBuilder, 
     private commonApiCallService: CommonApiCallService,
     private httpClient : HttpClient){}
-
-   ngOnInit(){
+    todayDate = new Date();
+    searchBoxVal:any;
+    
+    ngOnInit(){
     console.log('...');
     this.myForm();
     this.getData();

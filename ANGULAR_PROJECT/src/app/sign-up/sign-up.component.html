@@ -28,7 +28,7 @@
         <br><br>
         
         <label>MobNo</label><br>
-        <input type="text" formControlName="mobNo"><br>
+        <input type="text" formControlName="mobNo" appNumbersOnly><br>
         <span *ngIf="!signUpForm.get('mobNo')?.touched">Hint: Enter you Mobile Number</span>
         <span *ngIf="signUpForm.get('mobNo')?.errors?.['pattern']
                 && signUpForm.get('mobNo')?.touched " class="err">

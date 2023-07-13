@@ -7,7 +7,7 @@ import { StudentActivityComponent } from './student-activity/student-activity.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { ApicallComponent } from './apicall/apicall.component';
-import { NumbersOnlyDirective } from './numbers-only.directive';
+
 //import { HttpClientModule} from '@angular/common/http';
 console.log('student module');
 
@@ -17,7 +17,7 @@ console.log('student module');
     StudentActivityComponent,
     ApicallComponent,
   
-    NumbersOnlyDirective,
+   
    // StudentDemoComponent
   ],
   imports: [

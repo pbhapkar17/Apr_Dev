@@ -13,6 +13,7 @@ import { ChildComponent } from './child/child.component';
 import { SharedModule } from './shared/shared.module';
 import { FormComponent } from './form/form.component';
 import { CharOnlyDirective } from './char-only.directive';
+import { FilterPipe } from './filter.pipe';
 //import { HttpClientModule } from '@angular/common/http';
 
 
@@ -31,7 +32,8 @@ console.log('app.module.ts file');
     ParentComponent,
     ChildComponent,
     FormComponent,
-    CharOnlyDirective, 
+    CharOnlyDirective,
+    FilterPipe, 
    
     
   ],
