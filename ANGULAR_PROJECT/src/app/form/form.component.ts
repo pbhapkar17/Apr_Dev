@@ -13,11 +13,14 @@ export class FormComponent {
    adminData:any;
    tableHeading : any[]= ['Full Name', "Mobile Number", "City", "Email"];
    myName = 'poonam';
+   todayDate = new Date();
+   searchBoxVal:any;
+   inp:any;
+   inputValue:any;
    constructor(private fb : FormBuilder, 
     private commonApiCallService: CommonApiCallService,
     private httpClient : HttpClient){}
-    todayDate = new Date();
-    searchBoxVal:any;
+    
     
     ngOnInit(){
     console.log('...');
@@ -50,8 +53,16 @@ export class FormComponent {
       this.commonApiCallService.getApiCall(endpointToGetData).subscribe(data =>{
       console.log('get data',data);
       this.adminData = data;
-    });
-    
-     
+    }); 
+    }
+
+    inptVal(val:any){
+      console.log('val',val.target.value);
+      console.log('inputValue',this.inputValue);
+      
+      this.inp = val.target.value
+    }
+    searchBoxValue(){
+      this.searchBoxVal = this.inp;
     }
 }

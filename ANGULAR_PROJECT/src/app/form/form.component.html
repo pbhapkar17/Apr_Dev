@@ -9,7 +9,8 @@
 </form><br><br>
 
 <div>
-    <input type="text" [(ngModel)]="searchBoxVal">Search here
+    <input type="text" placeholder="Search here..."[(ngModel)]="inputValue" (keyup)="inptVal($event)">
+    <button (click)="searchBoxValue()">Search</button>
 </div>
 <div *ngIf = "adminData" class="table-container">
     <table>
@@ -17,7 +18,7 @@
         <th *ngFor ="let heading of tableHeading"> {{heading}} </th>
      </tr>
      <tr *ngFor ="let tableData of adminData | filter : searchBoxVal">
-        <td>{{tableData.fullName}}</td>
+        <td>{{tableData.fullName }}</td>
         <td>{{tableData.mobNo}}</td>
         <td>{{tableData.city}}</td>
         <td>{{tableData.email}}</td>
@@ -29,6 +30,7 @@
 <div>
     {{myName | uppercase }} <br>
     {{myName | lowercase }}
+    <!-- {{ todayDate | date | uppercase}} multiple pipe examp-->
 </div>
 
 <div>
@@ -37,4 +39,8 @@
     {{todayDate | date:'shortDate' }} <br>
     {{todayDate | date:'fullDate' }} (IST)
 </div>
-<br><br><br>
+<br>
+
+<button mat-raised-button color="primary">Primary</button>
+<button mat-raised-button color="accent">Accent</button>
+<br><br>

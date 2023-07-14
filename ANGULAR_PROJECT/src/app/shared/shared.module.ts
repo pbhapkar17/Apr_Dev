@@ -4,7 +4,7 @@ import { StudentDemoComponent } from '../student/student-demo/student-demo.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NumbersOnlyDirective } from '../student/numbers-only.directive';
-
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -16,7 +16,8 @@ import { NumbersOnlyDirective } from '../student/numbers-only.directive';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
   ],
   exports:[
     StudentDemoComponent,
@@ -24,6 +25,7 @@ import { NumbersOnlyDirective } from '../student/numbers-only.directive';
     ReactiveFormsModule,
     HttpClientModule,
     NumbersOnlyDirective,
+    MatButtonModule
   ]
 })
 export class SharedModule { }
