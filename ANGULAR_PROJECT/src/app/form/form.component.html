@@ -9,20 +9,20 @@
 </form><br><br>
 
 <div>
-    <input type="text" placeholder="Search here..."[(ngModel)]="inputValue" (keyup)="inptVal($event)">
+    <input type="text" placeholder="Search here..." [(ngModel)]="inputValue" (keyup)="inptVal($event)">
     <button (click)="searchBoxValue()">Search</button>
 </div>
-<div *ngIf = "adminData" class="table-container">
+<div *ngIf="adminData" class="table-container">
     <table>
-     <tr>
-        <th *ngFor ="let heading of tableHeading"> {{heading}} </th>
-     </tr>
-     <tr *ngFor ="let tableData of adminData | filter : searchBoxVal">
-        <td>{{tableData.fullName }}</td>
-        <td>{{tableData.mobNo}}</td>
-        <td>{{tableData.city}}</td>
-        <td>{{tableData.email}}</td>
-     </tr>
+        <tr>
+            <th *ngFor="let heading of tableHeading"> {{heading}} </th>
+        </tr>
+        <tr *ngFor="let tableData of adminData | filter : searchBoxVal">
+            <td>{{tableData.fullName }}</td>
+            <td>{{tableData.mobNo}}</td>
+            <td>{{tableData.city}}</td>
+            <td>{{tableData.email}}</td>
+        </tr>
     </table>
 </div>
 <br><br>
@@ -41,6 +41,49 @@
 </div>
 <br>
 
-<button mat-raised-button color="primary">Primary</button>
-<button mat-raised-button color="accent">Accent</button>
+<button mat-raised-button color="primary">Submit</button>
+<button mat-raised-button color="accent">Save</button>
 <br><br>
+<input type="checkbox">
+<mat-checkbox> checkbox </mat-checkbox>
+<br><br><br><br>
+----------------
+
+<form [formGroup]="matForm">
+    <mat-form-field class="name-field">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName">
+        <mat-hint class="hint" *ngIf="!matForm.get('firstName')?.touched">Please Enter First Name here</mat-hint>
+        <mat-error *ngIf="matForm.get('firstName')?.hasError('required')">
+            First Name is required
+        </mat-error>
+        <mat-error *ngIf="matForm.get('firstName')?.errors?.['pattern']">
+            pattern not matched
+        </mat-error>
+        <mat-error *ngIf="!matForm.get('firstName')?.errors?.['pattern'] && matForm.get('firstName')?.errors?.['minlength']">
+          minimum 2 charachters required
+        </mat-error>
+    </mat-form-field> &nbsp;
+
+    <mat-form-field>
+        <mat-label>Middle Name</mat-label>
+        <input matInput  formControlName="middleName">
+        <mat-hint class="hint">Please Enter Middle Name here</mat-hint>
+        <mat-error *ngIf="matForm.get('middleName')?.errors?.['required']">
+            Middle Name is required
+        </mat-error>
+    </mat-form-field> &nbsp;
+
+    <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput  formControlName="lastName">
+        <mat-hint class="hint">Please Enter Last Name here</mat-hint>
+        <mat-error *ngIf="matForm.get('lastName')?.errors?.['required']">
+            Last Name is required
+        </mat-error>
+    </mat-form-field>
+
+</form>
+
+<br><br><br><br><br><br><br>
+-----------------

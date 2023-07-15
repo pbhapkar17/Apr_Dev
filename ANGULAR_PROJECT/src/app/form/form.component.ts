@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonApiCallService } from '../student/common-api-call.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -17,6 +17,7 @@ export class FormComponent {
    searchBoxVal:any;
    inp:any;
    inputValue:any;
+   matForm! : FormGroup;
    constructor(private fb : FormBuilder, 
     private commonApiCallService: CommonApiCallService,
     private httpClient : HttpClient){}
@@ -26,7 +27,7 @@ export class FormComponent {
     console.log('...');
     this.myForm();
     this.getData();
-    
+    this.matFormDetails();
    }
 
     myForm(){
@@ -64,5 +65,13 @@ export class FormComponent {
     }
     searchBoxValue(){
       this.searchBoxVal = this.inp;
+    }
+
+    matFormDetails(){
+      this.matForm = this.fb.group({
+        firstName : ['',[Validators.required, Validators.pattern('[a-zA-Z]*$'),Validators.minLength(2)]],
+        middleName : ['',[Validators.required]],
+        lastName : ['',[Validators.required]]
+      })
     }
 }

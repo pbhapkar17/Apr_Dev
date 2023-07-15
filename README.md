@@ -153,3 +153,6 @@ typescript
 const headers = new HttpHeaders().set('Authorization', 'Bearer your_token');
 this.http.get(apiUrl, { headers }).subscribe(/* ... */);
 These steps provide a basic outline for making API calls in Angular 10. Depending on your requirements, you may need to include additional logic for handling authentication, handling response transformations, or working with observables and operators to manage asynchronous data flow.
+
+To install angular material:
+ng add @angular/material
