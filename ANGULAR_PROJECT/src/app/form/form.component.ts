@@ -18,6 +18,12 @@ export class FormComponent {
    inp:any;
    inputValue:any;
    matForm! : FormGroup;
+   showPassword : boolean = false;
+   showConfirmPassword: boolean = false;
+   passwordField: any;
+   confirmPasswordField: any;
+   passwordMatch : boolean = false;
+   ConfirmPasswordMatch: boolean= false;
    constructor(private fb : FormBuilder, 
     private commonApiCallService: CommonApiCallService,
     private httpClient : HttpClient){}
@@ -71,7 +77,42 @@ export class FormComponent {
       this.matForm = this.fb.group({
         firstName : ['',[Validators.required, Validators.pattern('[a-zA-Z]*$'),Validators.minLength(2)]],
         middleName : ['',[Validators.required]],
-        lastName : ['',[Validators.required]]
+        lastName : ['',[Validators.required]],
+        password:['',[Validators.required]],
+        confirmPassword:['',[Validators.required]]
       })
+    }
+
+    visibilePassword(){
+      this.showPassword =  !this.showPassword;
+      
+     
+      
+    }
+    visibileConfirmPassword(){
+      //this.confirmPasswordField = this.matForm.value.confirmPassword;
+      this.showConfirmPassword = !this.showConfirmPassword;
+     // this.passwordField == this.confirmPasswordField ? this.ConfirmPasswordMatch=true : this.ConfirmPasswordMatch = false;
+    }
+    passValidation(){
+      console.log(this.matForm.value.password);
+      this.passwordField = this.matForm.value.password;
+      this.confirmPasswordField = this.matForm.value.confirmPassword;
+      if(this.passwordField == this.confirmPasswordField){
+        this.passwordMatch = false
+      }
+      else{
+        this.passwordMatch = true;
+      }
+    }
+    confPassValidation(){
+      this.passwordField = this.matForm.value.password;
+      this.confirmPasswordField = this.matForm.value.confirmPassword;
+      if(this.passwordField == this.confirmPasswordField){
+        this.ConfirmPasswordMatch = false
+      }
+      else{
+        this.ConfirmPasswordMatch = true;
+      }
     }
 }

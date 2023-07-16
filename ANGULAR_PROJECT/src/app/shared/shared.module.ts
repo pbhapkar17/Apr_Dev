@@ -7,7 +7,7 @@ import { NumbersOnlyDirective } from '../student/numbers-only.directive';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
-
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [ //c + p + d
     StudentDemoComponent,
@@ -20,7 +20,8 @@ import {MatInputModule} from '@angular/material/input';
     HttpClientModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
   ],
   exports:[
     StudentDemoComponent,
@@ -30,7 +31,8 @@ import {MatInputModule} from '@angular/material/input';
     NumbersOnlyDirective,
     MatButtonModule,
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
   ]
 })
 export class SharedModule { }

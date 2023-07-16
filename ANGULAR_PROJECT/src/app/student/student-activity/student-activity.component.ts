@@ -63,7 +63,7 @@ export class StudentActivityComponent {
     let pasLength = this.passwordValue.length;
     if(pasLength > 10){
       this.strongPassword =true;
-    }
+    }   
   }
 
   confirmPassword() {
