@@ -66,16 +66,15 @@ export class SignUpComponent {
        console.log(' this.sDataService.userFullName>>', this.sDataService.userFullName);
        this.sDataService.listOfUsers = ['poonam','pooja','nitin','shri'];
        let endPoint="admin";
-       if(this.journey != 'update'){
+       if(this.journey == 'update'){
+        this.commonApiCallService.putApiCall(endPoint,this.signUpForm.value,'14').subscribe(res=>{
+          console.log(res); 
+        })
+       }
+       else{
         this.commonApiCallService.postApiCall(endPoint,this.signUpForm.value).subscribe(response=>{
           this.postApiData = response ;
          })
-       }
-       else{
-        this.commonApiCallService.putApiCall(endPoint,this.signUpForm.value,'14').subscribe(res=>{
-          console.log(res);
-          
-        })
        }
        
        this.router.navigateByUrl('landing');

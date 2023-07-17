@@ -149,4 +149,7 @@ updateDetails(){
   }
  
 }
+subject(){
+this.router.navigateByUrl('subject1')
+}
 }
