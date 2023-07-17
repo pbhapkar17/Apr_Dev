@@ -27,7 +27,11 @@ export class LoginComponent {
 
   submit(formData:any){
     console.log(formData);
-    
+
+      //TO DO login logic to be implement
+
+
+    //post API for template driven form..
     let requestData = {
       fullName : formData.fName,
       password : formData.pass,
