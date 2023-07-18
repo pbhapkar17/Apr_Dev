@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { StoringDataService } from '../storing-data.service';
 
 @Component({
@@ -7,12 +7,17 @@ import { StoringDataService } from '../storing-data.service';
   styleUrls: ['./subject2.component.css']
 })
 export class Subject2Component {
-  nameComingFromSub1! : string;
+  nameComingFromSub1! : string ;
+  surName = 'Patil';
+
+
   constructor(private storingDataService: StoringDataService){}
+
   ngOnInit(){
     console.log('init s2');
-   this.storingDataService.name.subscribe(data=>{
+    this.storingDataService.name.subscribe(data=>{
      this.nameComingFromSub1 = data;
    })
   }
+
 }

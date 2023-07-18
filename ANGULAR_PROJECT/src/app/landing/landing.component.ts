@@ -152,4 +152,7 @@ updateDetails(){
 subject(){
 this.router.navigateByUrl('subject1')
 }
+subject3(){
+  this.router.navigateByUrl('subject3')
+  }
 }

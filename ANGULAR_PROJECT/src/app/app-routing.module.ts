@@ -9,6 +9,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { FormComponent } from './form/form.component';
 import { Subject1Component } from './subject1/subject1.component';
+import { Subject3Component } from './subject3/subject3.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path : 'child', component : ChildComponent},
   { path:'form', component: FormComponent},
   { path : 'subject1', component : Subject1Component},
+  { path : 'subject3', component : Subject3Component},
   { path : 'student', loadChildren:()=>import ('./student/student.module').then(mod=>mod.StudentModule) }
 ];
 
