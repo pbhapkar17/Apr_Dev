@@ -1,8 +1,9 @@
 <div>
-    <div>
-        <br>
-        <button mat-raised-button color="primary" (click)="login()">Login</button><br><br>
-        <a routerLink="/owner/ownerSignUp" mat-raised-button color="accent">Don't Have an Account? Please Sign Up Here</a>
+    <div class="btn-container">
+        <button mat-raised-button color="primary"  class="btns" (click)="back()">Back</button>
+        <button mat-raised-button color="primary"  class="btns" (click)="login()">Login</button>
+        <button routerLink="/owner/ownerSignUp"  class="btns" mat-raised-button color="primary"> Sign Up</button>
+        <button routerLink="" mat-raised-button  class="btns" color="accent"> My Hotels</button>
     </div>
 
 </div>
