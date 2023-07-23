@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ownerhome',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class OwnerhomeComponent {
 
+  constructor(private router: Router){
+
+  }
+
+  login(){
+     this.router.navigateByUrl('owner/ownerLogin')
+  }
+  back(){
+    this.router.navigateByUrl('home')
+  }
 }
