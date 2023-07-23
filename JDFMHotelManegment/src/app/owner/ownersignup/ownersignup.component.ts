@@ -10,7 +10,7 @@ import { CommonService } from 'src/app/common/common.service';
   styleUrls: ['./ownersignup.component.scss']
 })
 export class OwnersignupComponent {
-  LoginForm!:FormGroup;
+  signUpForm!:FormGroup;
   journey!:string;
   postResponse:any;
   constructor(private fb:FormBuilder,
@@ -26,7 +26,7 @@ export class OwnersignupComponent {
   }
 
   FormDetails(){
-    this.LoginForm = this.fb.group({
+    this.signUpForm = this.fb.group({
       name:['',[]],
       email:['',[]],
       mobile:['',[]],
@@ -38,11 +38,11 @@ export class OwnersignupComponent {
   }
   submit(){
     let request = {
-      UserName : this.LoginForm.value.name,
-      Email:   this.LoginForm.value.email,
-      Mobile :  this.LoginForm.value.mobile,
-      Password :  this.LoginForm.value.password,
-      Gender :  this.LoginForm.value.gender
+      UserName : this.signUpForm.value.name,
+      Email:   this.signUpForm.value.email,
+      Mobile :  this.signUpForm.value.mobile,
+      Password :  this.signUpForm.value.password,
+      Gender :  this.signUpForm.value.gender
     }
 
     this.apiCallService.postApiCall(this.journey,request).subscribe(resp=>{
@@ -50,8 +50,12 @@ export class OwnersignupComponent {
       this.postResponse = resp;
     })
     // if(this.postResponse?.id){
-     this.router.navigateByUrl('owner/ownerLogin');
+     this.router.navigateByUrl('owner/ownerSuccess');
      //}
+  }
+
+  back(){
+    this.router.navigateByUrl('owner/ownerHome')
   }
 
 }

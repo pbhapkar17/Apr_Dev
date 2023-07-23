@@ -25,6 +25,22 @@
       "Password": "shree",
       "Gender": "male",
       "id": 3
+    },
+    {
+      "UserName": "sachin",
+      "Email": "sachin@gmail.com",
+      "Mobile": "989898989",
+      "Password": "sachin@123",
+      "Gender": "male",
+      "id": 4
+    },
+    {
+      "UserName": "Sai",
+      "Email": "Sai@gmail",
+      "Mobile": "98989898989",
+      "Password": "Sai@123",
+      "Gender": "male",
+      "id": 5
     }
   ],
   "hotelDetails": []

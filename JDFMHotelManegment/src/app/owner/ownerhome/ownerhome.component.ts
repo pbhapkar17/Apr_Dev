@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup,FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,13 +8,27 @@ import { Router } from '@angular/router';
   styleUrls: ['./ownerhome.component.scss']
 })
 export class OwnerhomeComponent {
-
-  constructor(private router: Router){
+  loginForm!:FormGroup;
+  constructor(private router: Router,
+    private fb : FormBuilder){
 
   }
+ 
+  ngOnInit(){
+    this.loginFormDetails();
+  }
+
+  loginFormDetails(){
+    this.loginForm = this.fb.group({
+      userName:[],
+      password:[]
+    })
+  }
+
 
   login(){
-     this.router.navigateByUrl('owner/ownerLogin')
+     console.log(this.loginForm.value);
+     
   }
   back(){
     this.router.navigateByUrl('home')

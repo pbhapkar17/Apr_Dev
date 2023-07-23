@@ -1,9 +1,11 @@
+<button mat-raised-button color="primary" (click)="back()">Back</button>
 <mat-card>
+
     <mat-card-header>
         <h2>Owner Sign Up Form</h2>
     </mat-card-header>
     <mat-card-content>
-        <form class="example-form" [formGroup]="LoginForm">
+        <form [formGroup]="signUpForm">
             <mat-form-field class="example-full-width">
                 <mat-label>Name</mat-label>
                 <input matInput formControlName="name" >
