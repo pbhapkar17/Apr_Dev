@@ -91,7 +91,7 @@ new_Hotel_Registration click-->  new_Hotel_RegistrationComponent --> form {
        owenerMobNo
       "hotelName"
       "hotelAddress"
-      "hotelMobile"
+      "hotelContact"
       "hotelMenu"
       "roomAvailable"
       "owenrCheck":
