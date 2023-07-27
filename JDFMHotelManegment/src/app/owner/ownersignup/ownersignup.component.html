@@ -8,9 +8,22 @@
         <form [formGroup]="signUpForm">
             <mat-form-field class="example-full-width">
                 <mat-label>Name</mat-label>
-                <input matInput formControlName="name" >
+                <input matInput formControlName="name" > 
+                <!-- !false => true ; !true =>false -->
+               <mat-hint *ngIf="!signUpForm.get('name')?.touched">
+                Please Enter Name here
+              </mat-hint>
+               <mat-error *ngIf="signUpForm.get('name')?.errors?.['minlength'] && !signUpForm.get('name')?.errors?.['pattern']">
+                Minimum 5 characters are required
+              </mat-error>
+              <mat-error *ngIf="signUpForm.get('name')?.errors?.['pattern']">
+                pattern should matched
+              </mat-error>
+              <mat-error *ngIf="signUpForm.get('name')?.errors?.['whiteSpace'] ">
+                Name entered is containing white space
+              </mat-error>
               </mat-form-field>
-              <mat-form-field class="example-full-width">
+              <!-- <mat-form-field class="example-full-width">
                 <mat-label>Email</mat-label>
                 <input matInput formControlName="email" >
               </mat-form-field>
@@ -27,7 +40,7 @@
                 <mat-radio-button value="male">Male</mat-radio-button>
                 <mat-radio-button value="female">Female</mat-radio-button>
                 <mat-radio-button value="other">Other</mat-radio-button>
-              </mat-radio-group>
+              </mat-radio-group> -->
              <div>
               <button mat-raised-button color="primary" (click)="submit()">Submit</button>
              </div>

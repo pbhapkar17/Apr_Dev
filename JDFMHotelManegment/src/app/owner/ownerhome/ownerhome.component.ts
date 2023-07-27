@@ -39,6 +39,9 @@ export class OwnerhomeComponent {
 
   login() {
     console.log(this.loginForm.value);
+    if(this.loginForm.value.userName ){
+       this.commonService.userName = this.loginForm.value.userName ;
+    }
     this.getOwnerApiData();
     console.log('this.ownerData', this.ownerData);
 

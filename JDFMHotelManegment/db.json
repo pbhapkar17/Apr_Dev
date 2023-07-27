@@ -35,6 +35,14 @@
       "id": 4
     },
     {
+      "UserName": "tushar",
+      "Email": "tushar@gmail.com",
+      "Mobile": "989898989",
+      "Password": "tushar@123",
+      "Gender": "male",
+      "id": 5
+    },
+    {
       "UserName": "Sai",
       "Email": "Sai@gmail",
       "Mobile": "98989898989",
@@ -43,5 +51,66 @@
       "id": 5
     }
   ],
-  "hotelDetails": []
+  "hotelDetails": [
+    {
+      "ownerName": "poonam",
+      "ownerContact": "56565656",
+      "hotelName": "Sai Hotel",
+      "hotelAddress": "MiraRoad Mumbai",
+      "hotelContact": "99999898",
+      "hotelMenu": "veg,non-veg",
+      "roomsAvailable": "100",
+      "ownerCheck": "true",
+      "password": "poonam@123",
+      "id": 1
+    },
+    {
+      "ownerName": "poonam",
+      "ownerContact": "656565666",
+      "hotelName": "Taj Hotel",
+      "hotelAddress": "MiraRoad Mumbai",
+      "hotelContact": "99999898",
+      "hotelMenu": "veg,non-veg",
+      "roomsAvailable": "100",
+      "ownerCheck": "true",
+      "password": "poonam@123",
+      "id": 1
+    },
+    {
+      "ownerName": "poonam",
+      "ownerContact": "656565666",
+      "hotelName": "Golden Palace Hotel",
+      "hotelAddress": "MiraRoad Mumbai",
+      "hotelContact": "99999898",
+      "hotelMenu": "veg,non-veg",
+      "roomsAvailable": "100",
+      "ownerCheck": "true",
+      "password": "poonam@123",
+      "id": 1
+    },
+    {
+      "ownerName": "tushar",
+      "ownerContact": "666666",
+      "hotelName": "Oberoy Hotel",
+      "hotelAddress": "Mumbai",
+      "hotelContact": "99999999999",
+      "hotelMenu": "veg,non-veg",
+      "roomsAvailable": "50",
+      "ownerCheck": "true",
+      "password": "tushar@123",
+      "id": 2
+    },
+    {
+      "ownerName": "mayur",
+      "ownerContact": "979797",
+      "hotelName": "Shreenivasa Hotel",
+      "hotelAddress": "pune",
+      "hotelContact": "98989898",
+      "hotelMenu": "",
+      "roomsAvailable": "",
+      "ownerCheck": "",
+      "password": "",
+      "id": 2
+    }
+  ]
 }

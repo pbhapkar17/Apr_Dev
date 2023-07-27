@@ -27,7 +27,7 @@ export class OwnersignupComponent {
 
   FormDetails(){
     this.signUpForm = this.fb.group({
-      name:['',[]],
+      name:['',[Validators.required,Validators.minLength(5),Validators.pattern('[a-zA-Z ]*'),this.commonService.whiteSpaceValidator]],
       email:['',[]],
       mobile:['',[]],
       password:['',[]],
@@ -38,7 +38,7 @@ export class OwnersignupComponent {
   }
   submit(){
     let request = {
-      UserName : this.signUpForm.value.name,
+      UserName : this.signUpForm.value.name?.split(" ").join(' '),
       Email:   this.signUpForm.value.email,
       Mobile :  this.signUpForm.value.mobile,
       Password :  this.signUpForm.value.password,
@@ -57,5 +57,7 @@ export class OwnersignupComponent {
   back(){
     this.router.navigateByUrl('owner/ownerHome')
   }
+
+
 
 }
