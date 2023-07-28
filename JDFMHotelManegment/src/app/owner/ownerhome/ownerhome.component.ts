@@ -15,7 +15,8 @@ export class OwnerhomeComponent {
   endPoint!:string;
   ownerData : any;
   validUser: boolean = false;
-
+  forgetPasswordForm!:FormGroup;
+  showForgetPasswordForm: boolean = false;
   constructor(private router: Router,
     private fb: FormBuilder,
     private commonApiCallService: CommonApiCallService,
@@ -35,8 +36,13 @@ export class OwnerhomeComponent {
       password:[]
     })
   }
-
-
+  forgoPasswordFormDetails(){
+    this.forgetPasswordForm = this.fb.group({
+      newPassword:[],
+      confirmPassword:[]
+    })
+  }
+  
   login() {
     console.log(this.loginForm.value);
     if(this.loginForm.value.userName ){
@@ -68,11 +74,46 @@ export class OwnerhomeComponent {
   }
 
   isValidUser(){
-    this.ownerData.forEach((element:any)=>{
-      if(element.UserName === this.loginForm.value.userName && element.Password === this.loginForm.value.password) {
+    this.ownerData.forEach((ownerData:any)=>{
+      if(ownerData.UserName === this.loginForm.value.userName && ownerData.Password === this.loginForm.value.password) {
         this.validUser = true;
       }     
     });
     return
+  }
+
+  forgetPassword(){
+    this.showForgetPasswordForm = !this.showForgetPasswordForm;
+    this.forgoPasswordFormDetails();
+  }
+
+  submit(){
+    if(this.ownerData ){
+      this.updatePassword();
+     }
+     else{
+       this.getOwnerApiData();
+       this.updatePassword();
+     }
+     this.showForgetPasswordForm = !this.showForgetPasswordForm;
+  }
+  updatePassword(){
+    var user:any;
+    this.ownerData.forEach((data:any)=>{
+      if(data.UserName ===  this.loginForm.value.userName){
+        user = data;
+      }
+      console.log('user',user);
+      
+    }) 
+    if(user){
+      let request = {
+        Password : this.forgetPasswordForm.value.newPassword
+      }
+        this.commonApiCallService.patchApiCall(this.endPoint,request,user.id ).subscribe((respo:any)=>{
+          console.log(respo);
+          
+        })
+    }
   }
 }

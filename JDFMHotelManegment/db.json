@@ -11,18 +11,14 @@
       "id": 1
     },
     {
-      "UserName": "shree",
-      "Email": "shree34@gmail.com",
-      "Mobile": "3443333",
-      "Password": "shree",
-      "Gender": "male",
+      "Password": "shree@12345",
       "id": 2
     },
     {
       "UserName": "shree",
       "Email": "shree34@gmail.com",
       "Mobile": "3443333",
-      "Password": "shree",
+      "Password": "shree@12345",
       "Gender": "male",
       "id": 3
     },
@@ -48,7 +44,7 @@
       "Mobile": "98989898989",
       "Password": "Sai@123",
       "Gender": "male",
-      "id": 5
+      "id": 6
     }
   ],
   "hotelDetails": [
@@ -74,7 +70,7 @@
       "roomsAvailable": "100",
       "ownerCheck": "true",
       "password": "poonam@123",
-      "id": 1
+      "id": 2
     },
     {
       "ownerName": "poonam",
@@ -86,7 +82,7 @@
       "roomsAvailable": "100",
       "ownerCheck": "true",
       "password": "poonam@123",
-      "id": 1
+      "id": 3
     },
     {
       "ownerName": "tushar",
@@ -98,7 +94,7 @@
       "roomsAvailable": "50",
       "ownerCheck": "true",
       "password": "tushar@123",
-      "id": 2
+      "id": 3
     },
     {
       "ownerName": "mayur",
@@ -110,7 +106,7 @@
       "roomsAvailable": "",
       "ownerCheck": "",
       "password": "",
-      "id": 2
+      "id": 4
     }
   ]
 }
