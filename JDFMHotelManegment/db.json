@@ -6,7 +6,7 @@
       "UserName": "poonam",
       "Email": "poonambhapkar34@gmail.com",
       "Mobile": "6565666653",
-      "Password": "poonam@123",
+      "Password": "poonam$$$",
       "Gender": "female",
       "id": 1
     },
@@ -45,6 +45,14 @@
       "Password": "Sai@123",
       "Gender": "male",
       "id": 6
+    },
+    {
+      "UserName": "sharu",
+      "Email": "Sharu@gmail.com",
+      "Mobile": "989898989",
+      "Password": "Sharu@123",
+      "Gender": "female",
+      "id": 7
     }
   ],
   "hotelDetails": [

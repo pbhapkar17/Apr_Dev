@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup,FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonApiCallService } from 'src/app/common/common-api-call.service';
 import { CommonService } from 'src/app/common/common.service';
@@ -11,109 +11,115 @@ import { CommonService } from 'src/app/common/common.service';
 })
 export class OwnerhomeComponent {
 
-  loginForm!:FormGroup;
-  endPoint!:string;
-  ownerData : any;
+  loginForm!: FormGroup;
+  endPoint!: string;
+  ownerData: any;
   validUser: boolean = false;
-  forgetPasswordForm!:FormGroup;
+  forgetPasswordForm!: FormGroup;
   showForgetPasswordForm: boolean = false;
+  forgotPassword: boolean = false;
+  userName!: string;
   constructor(private router: Router,
     private fb: FormBuilder,
     private commonApiCallService: CommonApiCallService,
     private commonService: CommonService) {
 
   }
- 
-  ngOnInit(){
+
+  ngOnInit() {
     this.endPoint = this.commonService.journey;
-    console.log('endPoint...',this.endPoint);
+    this.forgotPassword = this.commonService.forgotPassword;
+    this.userName = this.commonService.userName;
+    console.log('endPoint...', this.endPoint);
     this.loginFormDetails();
+    this.getOwnerApiData();
   }
 
-  loginFormDetails(){
+  loginFormDetails() {
     this.loginForm = this.fb.group({
-      userName:[],
-      password:[]
+      userName: [],
+      password: []
     })
   }
-  forgoPasswordFormDetails(){
+  forgoPasswordFormDetails() {
     this.forgetPasswordForm = this.fb.group({
-      newPassword:[],
-      confirmPassword:[]
+      newPassword: [],
+      confirmPassword: []
     })
   }
-  
+
   login() {
     console.log(this.loginForm.value);
-    if(this.loginForm.value.userName ){
-       this.commonService.userName = this.loginForm.value.userName ;
+    if (this.loginForm.value.userName) {
+      this.commonService.userName = this.loginForm.value.userName;
     }
-    this.getOwnerApiData();
-    console.log('this.ownerData', this.ownerData);
 
     if (this.ownerData) {
-      this.isValidUser();
+      this.ownerData.find((ownerData: any) => {
+        if (ownerData.UserName === this.loginForm.value.userName && ownerData.Password === this.loginForm.value.password) {
+          this.validUser = true
+        }
+      });
+
       if (this.validUser) {
         this.router.navigateByUrl('owner/ownerSuccess');
       }
       else {
+        alert('username or password is incorrect');
+        this.commonService.forgotPassword = true;
         this.router.navigateByUrl('owner/ownerHome');
       }
     }
   }
-  back(){
+  back() {
     this.router.navigateByUrl('home')
   }
 
-  getOwnerApiData(){
-    this.commonApiCallService.getApiCall(this.endPoint).subscribe(getOwnerResponse=>{
-      this.ownerData = getOwnerResponse;
-    })
-    console.log('this.ownerData',this.ownerData);
-    
+  async getOwnerApiData() {
+    // this.commonApiCallService.getApiCall(this.endPoint).subscribe(getOwnerResponse=>{
+    //   this.ownerData = getOwnerResponse;
+    // })
+    this.ownerData = await this.commonApiCallService.getApiCall(this.endPoint).toPromise()
+    console.log('this.ownerData', this.ownerData);
+
+
   }
 
-  isValidUser(){
-    this.ownerData.forEach((ownerData:any)=>{
-      if(ownerData.UserName === this.loginForm.value.userName && ownerData.Password === this.loginForm.value.password) {
-        this.validUser = true;
-      }     
-    });
-    return
-  }
+  // isValidUser(){
+  //   this.ownerData.forEach((ownerData:any)=>{
+  //     if(ownerData.UserName === this.loginForm.value.userName && ownerData.Password === this.loginForm.value.password) {
+  //       this.validUser = true;
+  //     }     
+  //   });
+  // }
 
-  forgetPassword(){
+  forgetPassword() {
     this.showForgetPasswordForm = !this.showForgetPasswordForm;
     this.forgoPasswordFormDetails();
   }
 
-  submit(){
-    if(this.ownerData ){
-      this.updatePassword();
-     }
-     else{
-       this.getOwnerApiData();
-       this.updatePassword();
-     }
-     this.showForgetPasswordForm = !this.showForgetPasswordForm;
+  submit() {
+    this.updatePassword();
+    this.showForgetPasswordForm = !this.showForgetPasswordForm;
+    this.commonService.forgotPassword =false;
   }
-  updatePassword(){
-    var user:any;
-    this.ownerData.forEach((data:any)=>{
-      if(data.UserName ===  this.loginForm.value.userName){
+
+  async updatePassword() {
+    var user: any;
+    this.ownerData.forEach((data: any) => {
+      if (data.UserName === this.userName) {
         user = data;
       }
-      console.log('user',user);
-      
-    }) 
-    if(user){
+    })
+    if (user) {
       let request = {
-        Password : this.forgetPasswordForm.value.newPassword
+        Password: this.forgetPasswordForm.value.newPassword
       }
-        this.commonApiCallService.patchApiCall(this.endPoint,request,user.id ).subscribe((respo:any)=>{
-          console.log(respo);
-          
-        })
+      // this.commonApiCallService.patchApiCall(this.endPoint,request,user.id ).subscribe((respo:any)=>{
+      //   console.log(respo);
+      // })
+      await this.commonApiCallService.patchApiCall(this.endPoint, request, user.id).toPromise()
+   
     }
   }
 }

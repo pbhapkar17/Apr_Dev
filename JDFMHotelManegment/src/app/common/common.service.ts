@@ -7,6 +7,7 @@ export class CommonService {
   
   journey!:string;
   userName! :string;
+  forgotPassword!:boolean;
   constructor() { }
 
   whiteSpaceValidator(nameFieldValue:any){

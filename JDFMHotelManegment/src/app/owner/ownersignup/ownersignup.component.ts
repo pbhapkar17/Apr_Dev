@@ -36,19 +36,20 @@ export class OwnersignupComponent {
 
     })
   }
-  submit(){
+async submit(){
     let request = {
-      UserName : this.signUpForm.value.name?.split(" ").join(' '),
+      UserName : this.signUpForm.value.name?.replace(/\s+/g, " ").trim(),
       Email:   this.signUpForm.value.email,
       Mobile :  this.signUpForm.value.mobile,
       Password :  this.signUpForm.value.password,
       Gender :  this.signUpForm.value.gender
     }
 
-    this.apiCallService.postApiCall(this.journey,request).subscribe(resp=>{
-      console.log(resp);
-      this.postResponse = resp;
-    })
+    // this.apiCallService.postApiCall(this.journey,request).subscribe(resp=>{
+    //   console.log(resp);
+    //   this.postResponse = resp;
+    // })
+    this.postResponse =  await this.apiCallService.postApiCall(this.journey,request).toPromise()
     // if(this.postResponse?.id){
      this.router.navigateByUrl('owner/ownerSuccess');
      //}

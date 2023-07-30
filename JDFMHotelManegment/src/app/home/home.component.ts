@@ -13,7 +13,9 @@ export class HomeComponent {
               private commonService: CommonService){}
 
   journey(journey: string) {
+    
     this.showLogOut = true;
+
     if (journey === 'admin') {
       this.commonService.journey = 'admin';
       this.router.navigateByUrl('admin');
