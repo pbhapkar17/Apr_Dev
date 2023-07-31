@@ -65,7 +65,10 @@ export class OwnerhomeComponent {
         this.router.navigateByUrl('owner/ownerSuccess');
       }
       else {
-        alert('username or password is incorrect');
+       // alert('username or password is incorrect');
+       this.commonService.warningToaster('Password is incorrect','Warning',{
+        timeOut: 10000,
+        positionClass: 'toast-top-center'})
         this.commonService.forgotPassword = true;
         this.router.navigateByUrl('owner/ownerHome');
       }
@@ -101,7 +104,7 @@ export class OwnerhomeComponent {
   submit() {
     this.updatePassword();
     this.showForgetPasswordForm = !this.showForgetPasswordForm;
-    this.commonService.forgotPassword =false;
+    this.forgotPassword = false;
   }
 
   async updatePassword() {
@@ -120,6 +123,9 @@ export class OwnerhomeComponent {
       // })
       await this.commonApiCallService.patchApiCall(this.endPoint, request, user.id).toPromise()
    
+    }
+    else{
+      alert('user is not exist')
     }
   }
 }
