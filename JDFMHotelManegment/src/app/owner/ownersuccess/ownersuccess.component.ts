@@ -12,6 +12,7 @@ export class OwnersuccessComponent {
   hotelDetails:any;
   userName!: string;
   userHotelDetails:any[]=[]
+  showTable: any;
   constructor(private router:Router, private commonApiCallService:CommonApiCallService,
     private commonService: CommonService){}
 
@@ -24,11 +25,13 @@ export class OwnersuccessComponent {
      this.router.navigateByUrl('owner/newHotelRegistration')
   }
 
-  myHotelDetails(){
+ async myHotelDetails(){
+  this.showTable = !this.showTable
     let endPoint= 'hotelDetails';
-    this.commonApiCallService.getApiCall(endPoint).subscribe(data=>{
-      this.hotelDetails = data;
-    })
+    // this.commonApiCallService.getApiCall(endPoint).subscribe(data=>{
+    //   this.hotelDetails = data;
+    // })
+    this.hotelDetails =   await this.commonApiCallService.getApiCall(endPoint).toPromise()
     console.log('hotelDetails',this.hotelDetails);
     if(this.hotelDetails){
        this.hotelDetailsByOwner();
@@ -36,6 +39,7 @@ export class OwnersuccessComponent {
   }
 
       hotelDetailsByOwner(){
+        this.userHotelDetails=[]
         this.hotelDetails.forEach((element:any)=>{
            if(element.ownerName === this.userName ){
             this.userHotelDetails.push(element);

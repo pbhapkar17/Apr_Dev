@@ -24,7 +24,7 @@ export class NewhotelregistrationComponent {
       hotelContact:['',[Validators.required,Validators.pattern('[0-9]*$')]],
       hotelMenu:['',[Validators.required,Validators.minLength(2)]],
       roomsAvailable:['',[Validators.required,Validators.pattern('[0-9]*$')]],
-      ownerCheck:['',[Validators.required,]],
+    
       userPass:['',[Validators.required,]],
     })
   }
@@ -44,7 +44,6 @@ export class NewhotelregistrationComponent {
       hotelContact:this.hotelRagistrationForm.value.hotelContact,
       hotelMenu:this.hotelRagistrationForm.value.hotelMenu,
       roomsAvailable:this.hotelRagistrationForm.value.roomsAvailable,
-      ownerCheck:this.hotelRagistrationForm.value.ownerCheck,
       password:this.hotelRagistrationForm.value.userPass,
     }
     this.commonApiCallService.postApiCall(endpoint,request).subscribe((resp:any)=>{
