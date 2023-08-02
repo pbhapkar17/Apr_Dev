@@ -8,6 +8,8 @@ export class CommonService {
   journey!:string;
   userName! :string;
   forgotPassword!:boolean;
+  id!: number;
+  
   constructor(private toastrService:ToastrService) { }
 
   whiteSpaceValidator(nameFieldValue:any){
@@ -17,7 +19,8 @@ export class CommonService {
     return isNotValid ? {whiteSpace:true} : null
   }
 
-  warningToaster(title:any,msg:any,configuration:any){
-      this.toastrService.warning(title,msg,configuration)
+  warningToaster( msg:any, title:any, configuration:any ){
+      this.toastrService.warning( msg, title, configuration)
   }
+
 }

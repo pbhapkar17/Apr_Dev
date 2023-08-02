@@ -9,44 +9,63 @@ import { CommonService } from 'src/app/common/common.service';
   styleUrls: ['./ownersuccess.component.scss']
 })
 export class OwnersuccessComponent {
-  hotelDetails:any;
+  hotelDetails: any;
   userName!: string;
-  userHotelDetails:any[]=[]
+  userHotelDetails: any[] = []
   showTable: any;
-  constructor(private router:Router, private commonApiCallService:CommonApiCallService,
-    private commonService: CommonService){}
 
-   ngOnInit(){
+  constructor(private router: Router, private commonApiCallService: CommonApiCallService,
+    private commonService: CommonService) { }
+
+  ngOnInit() {
     console.log('oninit calling...');
-      this.userName = this.commonService.userName;
-   }
-
-  hotelRegistration(){
-     this.router.navigateByUrl('owner/newHotelRegistration')
+    this.userName = this.commonService.userName;
   }
 
- async myHotelDetails(){
-  this.showTable = !this.showTable
-    let endPoint= 'hotelDetails';
+  hotelRegistration() {
+    this.router.navigateByUrl('owner/newHotelRegistration')
+  }
+
+  async myHotelDetails() {
+    this.showTable = !this.showTable;
+    let endPoint = 'hotelDetails';
     // this.commonApiCallService.getApiCall(endPoint).subscribe(data=>{
     //   this.hotelDetails = data;
     // })
-    this.hotelDetails =   await this.commonApiCallService.getApiCall(endPoint).toPromise()
-    console.log('hotelDetails',this.hotelDetails);
-    if(this.hotelDetails){
-       this.hotelDetailsByOwner();
+    this.hotelDetails = await this.commonApiCallService.getApiCall(endPoint).toPromise()
+    console.log('hotelDetails', this.hotelDetails);
+    this.userHotelDetails = []
+    if (this.hotelDetails) {
+      this.hotelDetailsByOwner();
+      if (this.userHotelDetails.length > 0) {
+
+      }
+      else {
+        this.commonService.warningToaster('no any hotel avaible', 'Warning', {
+          timeOut: 10000,
+          positionClass: 'toast-top-center'
+        })
+      }
+    } else {
+      alert('no owenr data avaible')
     }
   }
 
-      hotelDetailsByOwner(){
-        this.userHotelDetails=[]
-        this.hotelDetails.forEach((element:any)=>{
-           if(element.ownerName === this.userName ){
-            this.userHotelDetails.push(element);
-           }
-        })
-        console.log('this.userHotelDetails',this.userHotelDetails);
-     }
-   
-     
+  hotelDetailsByOwner() {
+    this.hotelDetails.forEach((element: any) => {
+      if (element.ownerName === this.userName) {
+        this.userHotelDetails.push(element);
+      }
+    })
+  }
+
+  async delete(id: number) {
+    await this.commonApiCallService.deleteApiCall('hotelDetails', id).toPromise();
+    this.showTable = !this.showTable;
+    this.myHotelDetails();
+  }
+  edit(id:number){
+    this.commonService.id = id;
+    this.router.navigateByUrl('owner/newHotelRegistration')
+  }
 }

@@ -20,8 +20,8 @@
        <td>{{hotelData.hotelAddress}}</td>
        <td>{{hotelData.hotelContact}}</td>
        <td>{{hotelData.hotelMenu}}</td>
-       <td><mat-icon >delete</mat-icon></td>
-       <td><mat-icon >mode_edit</mat-icon></td>
+       <td><mat-icon (click)="delete(hotelData.id)">delete</mat-icon></td>
+       <td><mat-icon (click)="edit(hotelData.id)" >mode_edit</mat-icon></td>
     </tr>
 </table>
 </div>

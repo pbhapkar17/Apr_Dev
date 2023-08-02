@@ -19,6 +19,10 @@ export class CommonApiCallService {
   }
   patchApiCall(endPoint:any,data:any,id:number) {
     let url = this.url + endPoint + '/' + id;
-    return this.http.patch(url,data) 
+    return this.http.patch(url,data);
+  }
+  deleteApiCall(endPoint:string,id:number){
+    let url = this.url + endPoint + '/' + id;
+    return this.http.delete(url);
   }
 }

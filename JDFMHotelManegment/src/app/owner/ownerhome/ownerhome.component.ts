@@ -66,9 +66,12 @@ export class OwnerhomeComponent {
       }
       else {
        // alert('username or password is incorrect');
-       this.commonService.warningToaster('Password is incorrect','Warning',{
+       this.commonService.warningToaster('Password is incorrect','Warning',
+       {
         timeOut: 10000,
-        positionClass: 'toast-top-center'})
+        positionClass: 'toast-top-center'
+       })
+
         this.commonService.forgotPassword = true;
         this.router.navigateByUrl('owner/ownerHome');
       }
