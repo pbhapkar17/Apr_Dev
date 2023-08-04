@@ -23,6 +23,7 @@ export class ApicallComponent {
   ngOnInit(){
     this.formDef();
   }
+  //CURD c-create/Post, U=Update/PUt/Patch Api , R=Read/Get APi, D=Delete api
   
   formDef(){
     this.signUpForm = this.fb.group({

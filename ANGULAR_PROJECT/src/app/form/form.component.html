@@ -9,10 +9,10 @@
 </form><br><br>
 
 <div>
-    <input type="text" placeholder="Search here..." [(ngModel)]="inputValue" (keyup)="inptVal($event)">
+    <input type="text" placeholder="Search here..." [(ngModel)]="inputValue">
     <button (click)="searchBoxValue()">Search</button>
 </div>
-<div *ngIf="adminData" class="table-container">
+<!-- <div *ngIf="adminData" class="table-container">
     <table>
         <tr>
             <th *ngFor="let heading of tableHeading"> {{heading}} </th>
@@ -24,7 +24,26 @@
             <td>{{tableData.email}}</td>
         </tr>
     </table>
-</div>
+</div> -->
+
+<ng-container *ngIf="( adminData | filter : searchBoxVal) as data">
+    <!-- <p *ngFor="let item of result">
+      {{item.name}}
+    </p> -->
+    <table  *ngIf="data.length > 0">
+        <tr>
+            <th *ngFor="let heading of tableHeading"> {{heading}} </th>
+        </tr>
+        <tr *ngFor="let tableData of data">
+            <td>{{tableData.fullName }}</td>
+            <td>{{tableData.mobNo}}</td>
+            <td>{{tableData.city}}</td>
+            <td>{{tableData.email}}</td>
+        </tr>
+    </table>
+    
+    <p *ngIf="data.length === 0">No Result</p>  
+  </ng-container>
 <br><br>
 
 <div>

@@ -1,8 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
+console.log('pipe calling');
 @Pipe({
   name: 'filter'
 })
+
+
 export class FilterPipe implements PipeTransform {
 
   transform(tableData: any, serachText:any): any {
@@ -14,7 +16,7 @@ export class FilterPipe implements PipeTransform {
      }
     let serach = serachText?.toLowerCase();
      return  tableData.filter((element:any)=>{
-     return  JSON.stringify(element.fullName).toLowerCase().includes(serach)
+     return  JSON.stringify(element).toLowerCase().includes(serach)
      })
   
   }

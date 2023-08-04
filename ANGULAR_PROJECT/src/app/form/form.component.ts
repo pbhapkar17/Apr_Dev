@@ -70,7 +70,9 @@ export class FormComponent {
       this.inp = val.target.value
     }
     searchBoxValue(){
-      this.searchBoxVal = this.inp;
+      console.log(this.inputValue);
+      
+      this.searchBoxVal = this.inputValue;
     }
 
     matFormDetails(){

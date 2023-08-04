@@ -66,7 +66,8 @@ export class LandingComponent {
    this.list = this.sDataService.listOfUsers;
   //setting json data to service
     this.studentDataService.data = this.jsonData ;
-    this.show()
+    this.show();
+    this.test1();
   }
  
  login(){    //functions , lifecycle hooks
@@ -154,5 +155,19 @@ this.router.navigateByUrl('subject1')
 }
 subject3(){
   this.router.navigateByUrl('subject3')
+  }
+
+
+  test1(){
+    let res = 100;
+    this.test2('poonam', 20, res, this.test3)
+  }
+
+  test2(name:string, age:number, integ:number, funName:any){
+     console.log(name,age,integ,funName);
+     
+  }
+  test3(){
+   return 5000;
   }
 }
