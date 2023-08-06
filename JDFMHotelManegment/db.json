@@ -58,7 +58,7 @@
   "hotelDetails": [
     {
       "ownerName": "poonam",
-      "ownerContact": "56565656",
+      "ownerContact": "656646998",
       "hotelName": "Sai Hotel",
       "hotelAddress": "MiraRoad Mumbai",
       "hotelContact": "99999898",
@@ -70,7 +70,7 @@
     },
     {
       "ownerName": "poonam",
-      "ownerContact": "656565666",
+      "ownerContact": "999999999",
       "hotelName": "Taj Hotel",
       "hotelAddress": "MiraRoad Mumbai",
       "hotelContact": "99999898",
@@ -102,7 +102,7 @@
       "roomsAvailable": "50",
       "ownerCheck": "true",
       "password": "tushar@123",
-      "id": 3
+      "id": 4
     },
     {
       "ownerName": "mayur",
@@ -114,7 +114,7 @@
       "roomsAvailable": "",
       "ownerCheck": "",
       "password": "",
-      "id": 4
+      "id": 5
     }
   ]
 }

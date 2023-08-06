@@ -8,7 +8,8 @@ export class CommonService {
   journey!:string;
   userName! :string;
   forgotPassword!:boolean;
-  id!: number;
+  id!: any;
+  dataById:any;
   
   constructor(private toastrService:ToastrService) { }
 

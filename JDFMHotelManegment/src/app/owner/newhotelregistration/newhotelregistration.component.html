@@ -1,3 +1,6 @@
+
+
+
 <div class="container">
     <mat-toolbar color="primary">
         <h2 class="h2"><mat-icon> local_hotel</mat-icon> GetSetBooking..</h2>
@@ -6,6 +9,8 @@
         </div>
     
     </mat-toolbar><br>
+    <br>
+    <button mat-raised-button color="primary" (click)="back()">back </button><br>
     <div>
         <form [formGroup]="hotelRagistrationForm" class="div-form">
             <mat-toolbar class="mat-toolbar" color="accent">
@@ -101,7 +106,7 @@
        
          
             <button mat-raised-button color="primary" (click)="submitDetails()">Submit Details </button> 
-            <button mat-raised-button color="primary" (click)="back()">back </button>
+          
     
     
         </form>

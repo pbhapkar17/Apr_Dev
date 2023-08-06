@@ -13,6 +13,7 @@ export class OwnersuccessComponent {
   userName!: string;
   userHotelDetails: any[] = []
   showTable: any;
+  dataById:any;
 
   constructor(private router: Router, private commonApiCallService: CommonApiCallService,
     private commonService: CommonService) { }
@@ -23,7 +24,8 @@ export class OwnersuccessComponent {
   }
 
   hotelRegistration() {
-    this.router.navigateByUrl('owner/newHotelRegistration')
+
+   this.router.navigateByUrl('owner/newHotelRegistration')
   }
 
   async myHotelDetails() {
@@ -64,8 +66,10 @@ export class OwnersuccessComponent {
     this.showTable = !this.showTable;
     this.myHotelDetails();
   }
-  edit(id:number){
+  async edit(id:number){
     this.commonService.id = id;
+    this.dataById = await this.commonApiCallService.getApiCall('hotelDetails', id).toPromise();
+    this.commonService.dataById = this.dataById;
     this.router.navigateByUrl('owner/newHotelRegistration')
   }
 }
