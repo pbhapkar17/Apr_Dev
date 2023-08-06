@@ -19,9 +19,6 @@ export class NewhotelregistrationComponent {
     this.editId = this.commonService.id;
     this.dataById = this.commonService.dataById;
     this.myOwnerRagistration();
-
-
-
   }
   myOwnerRagistration() {
     this.hotelRagistrationForm = this.formBulider.group({
@@ -73,8 +70,5 @@ export class NewhotelregistrationComponent {
     this.commonService.dataById = {};
     this.commonService.id = '';
   }
-
-
-
 
 }
