@@ -10,6 +10,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { ToastrModule } from 'ngx-toastr';
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -24,6 +26,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatToolbarModule,
     MatIconModule,
     ToastrModule.forRoot(),
+    MatDialogModule
    
   ],
   exports : [
@@ -36,6 +39,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatFormFieldModule,
     MatToolbarModule,
     MatIconModule,
+    MatDialogModule
    
   ]
 })
