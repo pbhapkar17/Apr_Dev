@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonService } from '../common/common.service';
-
+import * as CONSTANTS from 'src/app/common/common-constant' 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -16,16 +16,16 @@ export class HomeComponent {
     
     this.showLogOut = true;
 
-    if (journey === 'admin') {
-      this.commonService.journey = 'admin';
+    if (journey === CONSTANTS.journey.admin) {
+      this.commonService.journey = CONSTANTS.journey.admin;
       this.router.navigateByUrl('admin');
     }
-    else if (journey === 'owner') {
-      this.commonService.journey = 'owner';
+    else if (journey === CONSTANTS.journey.owner) {
+      this.commonService.journey =  CONSTANTS.journey.owner;
       this.router.navigateByUrl('owner');
     }
     else {
-      this.commonService.journey = 'user';
+      this.commonService.journey =  CONSTANTS.journey.user;
       this.router.navigateByUrl('user');
     }
   }

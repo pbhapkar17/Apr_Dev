@@ -4,18 +4,18 @@ import { Router } from '@angular/router';
 import { CommonApiCallService } from 'src/app/common/common-api-call.service';
 import { CommonService } from 'src/app/common/common.service';
 import { DialogComponent } from '../dialog/dialog.component';
-
+import * as CONSTANTS from 'src/app/common/common-constant' 
 @Component({
   selector: 'app-ownersuccess',
   templateUrl: './ownersuccess.component.html',
   styleUrls: ['./ownersuccess.component.scss']
 })
 export class OwnersuccessComponent {
-  hotelDetails: any;
-  userName!: string;
-  userHotelDetails: any[] = []
-  showTable: any;
-  dataById:any;
+ public hotelDetails: any;
+ public userName!: string;
+ public userHotelDetails: any[] = []
+ public showTable: any;
+ public dataById:any;
 
   constructor(private router: Router, private commonApiCallService: CommonApiCallService,
     private commonService: CommonService,public dialog: MatDialog) { }
@@ -32,7 +32,8 @@ export class OwnersuccessComponent {
 
   async myHotelDetails() {
     this.showTable = !this.showTable;
-    let endPoint = 'hotelDetails';
+   // let endPoint = 'hotelDetails';
+   let endPoint = CONSTANTS.endPoints.hotelDetails;
     // this.commonApiCallService.getApiCall(endPoint).subscribe(data=>{
     //   this.hotelDetails = data;
     // })
@@ -63,11 +64,10 @@ export class OwnersuccessComponent {
     })
   }
 
-   delete(id: number) {
+ public delete(id: number):void{
     const dialogRef = this.dialog.open(DialogComponent, {
-     // data: {id:id},
-      width: '250px',
-      height:'250px'
+   
+      panelClass: 'dialog-container',
     })
 
    dialogRef.afterClosed().subscribe((yesValue:any)=>{

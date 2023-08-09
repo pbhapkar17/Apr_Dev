@@ -9,8 +9,11 @@ import {  MatDialogRef  } from '@angular/material/dialog';
 })
 export class DialogComponent {
   //res = 'YES';
+  paneClass!: string;
 constructor(public dialogRef: MatDialogRef<DialogComponent> ,
-   ){}
+   ){
+    this.paneClass = 'dialog-container'
+   }
 
 
  
