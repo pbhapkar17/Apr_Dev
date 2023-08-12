@@ -23,7 +23,7 @@ console.log(emp);
 console.log(emp.employees);
 console.log(emp.employees[0].firstName);
 
-let emp1 =  {
+let emp1 =  {   //stringify json
     "employees": [
         { "firstName": "John", "lastName": "Doe" },
         { "firstName": "Anna", "lastName": "Smith" },
@@ -33,34 +33,46 @@ let emp1 =  {
     "mob":6597797979,
     "hobbies":['cricket','painting']
 }
+let emp10 =  {  // parsed json
+    employees: [
+        { firstName: "John", lastName: "Doe" },
+        { firstName: "Anna", lastName: "Smith" },
+        { firstName: "Peter", lastName: "Jones" }
+    ],
+    address:"A-903, mumbai",
+    mob:6597797979,
+    hobbies:['cricket','painting']
+}
 
 console.log(emp1.address);
 
 
 let studentData =
 {
-    studentName: "poonam",
-    studentFriends: ['om', 'Sai', 'Nitish'],
-    mob: 985898999,
-    address: [
+    "studentName": "poonam",
+    "studentFriends": ['om', 'Sai', 'Nitish'],
+    "mob": 985898999,
+    "address": [
         {
-            colony: "NgCanary",
-            Landmark: "Miraroad",
-            city: "mumbai"
+            "colony": "NgCanary",
+            "Landmark": "Miraroad",
+            "city": "mumbai"
         }
     ],
-    marks: [200, 30, [90, 6666, [10, [20, 666]]]],
-    test: [
+    "marks": [200, 30, [90, 6666, [10, [20, 666]]]],
+    "test": [
         {
-            FruitName: 'Mango'
+            "FruitName": 'Mango'
         },
         {
-            FruitName: 'Berry'
+            "FruitName": 'Berry'
         }
     ]
 }
 
 console.log(studentData);
+// console.log(JSON.stringify(studentData));
+// console.log(JSON.parse(studentData));
 console.log(studentData.studentName);
 console.log(studentData.studentFriends[2]);
 console.log(studentData.mob);
@@ -76,5 +88,5 @@ console.log(studentData.test[1].FruitName);
 console.log(studentData);
 let stringyFiedData = JSON.stringify(studentData);
 console.log(stringyFiedData);
-let parsedDate = JSON.parse(stringyFiedData);
-console.log(parsedDate);
+let parsedData = JSON.parse(stringyFiedData);
+console.log(parsedData);

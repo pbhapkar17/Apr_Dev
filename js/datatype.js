@@ -53,7 +53,9 @@ console.log(typeof(myFavFruit));
 let myCity = null;
 console.log(typeof(myCity)); //object
 
-
+let p = '';
+let q = null;
+let r = undefined;
 //bigInit
 let cash = 9999999999999999;
 console.log(cash);
@@ -79,7 +81,12 @@ console.log(items);
 
 
 function test2(){
-    return 'priya';
+    
+    let a=0;
+    if(true){
+        return 'priya';
+    }
+   console.log('45');
 }
 console.log(typeof(items));
 
@@ -89,7 +96,8 @@ console.log(typeof(color2));
 
 //length property to know about length of array and string;
 
-let cars = ['120','i10','swift','mini cup','marcdeez'];
+let cars = ['i20','i10','swift','mini cup','marcdeez'];
+let cars3 = ['dd','dd','swift','mini cup','g'];
 
 console.log(cars.length);
 
@@ -98,6 +106,7 @@ let num3 = 60000;
 
 console.log(cars[2]);
 console.log(cars[4]);
+console.log(cars[7]);//undefined
 console.log(cars[cars.length - 1]); //[5-1]= [4]
 
 //var no =[10,20 ,'poonam',true,30.255, test() ] //hetrogeneus items
@@ -154,12 +163,12 @@ let data = [
     {
         name: 'Om'
     },
-    [20, 50, [800, 80, [90, 900]]]
+    [20, 50, [800, 80, [90, 900]]]  //data[3][2][1]---80
 ]
 console.log(data);
 console.log(data[0].name);
 console.log(data[1][0].name1);
 console.log(data[3][2][2][0]);
-let value = data[3][2][2][0];
+let   = data[3][2][2][0];
 console.log(value);
 

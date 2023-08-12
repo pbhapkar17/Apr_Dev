@@ -13,9 +13,11 @@ function letVarConstDiff(){
 
     const z = 20;
    //const z = 30;  //1.reDeclaration of variable with let keyword is not possible within a same block
-  
-   
-  
+  console.log(typeof(undefined));
+   let hh = null;  //dt object
+   let hh1 = [10,2] //dt object
+   let kk= {nm:'pooja',age:40}
+
   if(true){
     var a = 90;      
     console.log( 'a>>',a);

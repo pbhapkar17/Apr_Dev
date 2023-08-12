@@ -14,8 +14,11 @@ console.log(num2);
 //The join() method also joins all array elements into a string.
 
 let num3= [20,55,33,55,1212,455];
-let num4 = num3.join(' * ');
+let num4 = num3.join('* ');
 console.log(num4);
+let n = '   poonam  dnndnd    patil     '
+let n1= n.replace(/\s+/g, " ").trim();
+console.log(n1);
 
 //The pop() method removes the last element from an array and pop will return the removed element:
 let num5 = [20,55,33,55,1212,455];
@@ -95,7 +98,7 @@ console.log(convertedNum12.length);
 let num9 = 5.65665878880;
 console.log(num9.toFixed(1)); //5.7
 console.log(num9.toFixed(2)); //5.66
-console.log(num9.toFixed(4));//5.6567
+console.log(num9.toFixed(4)); //5.6567
 
 //valueOf(): returns value of variable
 let x = 'kkkk';

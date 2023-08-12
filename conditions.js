@@ -103,3 +103,5 @@ for (let index = 0; index < cars1.length; index++) {
     car2.push(cars1[index]);
 }
 console.log( car2);
+
+

@@ -1,16 +1,17 @@
 //length property(string, array)
 let text = 'jgdjb djboj bdobou pooonam';
 console.log(text.length);
-
+// console.log( 'jgdjb djboj bdobou pooonam'.length);
 //slice(start index,end index) //start index exclusive and end index will be inclusive
 
-let text2 = 'Poonam lives in Mumbai';
+let text2 = 'Poonam lives in Mumbaihhh';
 console.log(text2.slice(16,22));
+console.log(text2.slice(16));
 let city = text2.slice(16,22)
 
 let text3 ='i like-mango';
 //slice(-start index,-end index) //start undex in negative para value will 
-//be includive and end index is exclusive
+//start index will be exclusive and end index is inclusive
 console.log(text3.slice(-6));
 console.log(text3.slice(7,12));
 
