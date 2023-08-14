@@ -41,6 +41,26 @@
                 <mat-radio-button value="female">Female</mat-radio-button>
                 <mat-radio-button value="other">Other</mat-radio-button>
               </mat-radio-group> 
+<!-- 
+              <mat-form-field appearance="outline">
+                <mat-label>Select a file</mat-label>
+                <input  type="file"  matInput formControlName="file" (change)="onFileSelected($event)">
+              </mat-form-field> -->
+
+              <!-- <div class="file-upload-container">
+                <input type="file" (change)="onFileSelected($event)" hidden>
+                <mat-form-field>
+                  <input matInput [value]="" readonly>
+                </mat-form-field>
+                <button mat-icon-button >
+                  <mat-icon>attach_file</mat-icon>
+                </button>
+              </div> -->
+          <br><br>
+                <input type="file"   formControlName="file"  (change)="onFileSelected($event)">
+          
+<br><br>
+
              <div>
               <button mat-raised-button color="primary" (click)="submit()">Submit</button>
              </div>

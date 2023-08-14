@@ -32,6 +32,7 @@ export class OwnersignupComponent {
       mobile:['',[]],
       password:['',[]],
       gender:['',[]],
+      file:['']
       
 
     })
@@ -42,7 +43,8 @@ async submit(){
       Email:   this.signUpForm.value.email,
       Mobile :  this.signUpForm.value.mobile,
       Password :  this.signUpForm.value.password,
-      Gender :  this.signUpForm.value.gender
+      Gender :  this.signUpForm.value.gender,
+      File :  this.signUpForm.value.file
     }
 
     // this.apiCallService.postApiCall(this.journey,request).subscribe(resp=>{
@@ -59,6 +61,14 @@ async submit(){
     this.router.navigateByUrl('owner/ownerHome')
   }
 
-
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+    // Do something with the selected file...
+    console.log(file.name);
+    // const formData = new FormData();
+    // formData.append('file', this.signUpForm.value.file);
+    // console.log(formData);
+   
+  }
 
 }

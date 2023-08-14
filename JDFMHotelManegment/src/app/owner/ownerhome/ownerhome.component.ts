@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonApiCallService } from 'src/app/common/common-api-call.service';
 import { CommonService } from 'src/app/common/common.service';
@@ -19,6 +19,7 @@ export class OwnerhomeComponent {
   showForgetPasswordForm: boolean = false;
   forgotPassword: boolean = false;
   userName!: string;
+  passwordMismatch:any;
   constructor(private router: Router,
     private fb: FormBuilder,
     private commonApiCallService: CommonApiCallService,
@@ -28,11 +29,13 @@ export class OwnerhomeComponent {
 
   ngOnInit() {
     this.endPoint = this.commonService.journey;
+   
     this.forgotPassword = this.commonService.forgotPassword;
     this.userName = this.commonService.userName;
     console.log('endPoint...', this.endPoint);
     this.loginFormDetails();
     this.getOwnerApiData();
+   
   }
 
   loginFormDetails() {
@@ -43,10 +46,23 @@ export class OwnerhomeComponent {
   }
   forgoPasswordFormDetails() {
     this.forgetPasswordForm = this.fb.group({
-      newPassword: [],
-      confirmPassword: []
-    })
+      newPassword: ['',[Validators.required]],
+      confirmPassword: ['',[Validators.required]]
+    },{validator: this.checkPasswords})
   }
+
+  checkPasswords(group: FormGroup) {
+    let password = group.controls['newPassword']?.value;
+    let confirmPassword = group.controls['confirmPassword']?.value;
+  
+    return password === confirmPassword ? null : { notSame: true };
+  }
+  // checkPasswords(event:any){
+  //   let password =  this.forgetPasswordForm.value?.newPassword;
+  //   let confirmPass = this.forgetPasswordForm.value?.confirmPassword;
+
+  //    password === confirmPass ? this.passwordMismatch = false : this.passwordMismatch = true;
+  // }
 
   login() {
     console.log(this.loginForm.value);

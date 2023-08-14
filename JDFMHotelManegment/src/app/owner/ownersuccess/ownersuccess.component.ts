@@ -22,7 +22,8 @@ export class OwnersuccessComponent {
 
   ngOnInit() {
     console.log('oninit calling...');
-    this.userName = this.commonService.userName;
+   // this.userName = this.commonService.userName;
+   this.userName = 'poonam'
   }
 
   hotelRegistration() {
