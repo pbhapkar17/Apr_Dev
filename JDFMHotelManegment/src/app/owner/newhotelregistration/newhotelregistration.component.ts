@@ -12,6 +12,7 @@ export class NewhotelregistrationComponent {
   hotelRagistrationForm!: FormGroup;
   editId!: number;
   dataById: any;
+  hotelImages!: any;
   constructor(private formBulider: FormBuilder, private router: Router,
     private commonApiCallService: CommonApiCallService, private commonService: CommonService) { }
 
@@ -30,6 +31,7 @@ export class NewhotelregistrationComponent {
       hotelMenu: [this.dataById ? this.dataById.hotelMenu : '', [Validators.required, Validators.minLength(2)]],
       roomsAvailable: [this.dataById ? this.dataById.roomsAvailable : '', [Validators.required, Validators.pattern('[0-9]*$')]],
       userPass: [this.dataById ? this.dataById.password : '', [Validators.required,]],
+      hotelImages :[this.dataById ? this.dataById.hotelImages : '' ]
     })
   }
 
@@ -49,6 +51,7 @@ export class NewhotelregistrationComponent {
       hotelMenu: this.hotelRagistrationForm.value.hotelMenu,
       roomsAvailable: this.hotelRagistrationForm.value.roomsAvailable,
       password: this.hotelRagistrationForm.value.userPass,
+      hotelImages :this.hotelImages
     }
 
     if(this.editId){
@@ -65,6 +68,20 @@ export class NewhotelregistrationComponent {
     this.router.navigateByUrl('owner/ownerSuccess');
   }
 
+  onFileSelected(event: any) {
+    let images =[...event.target.files]
+
+     let fileNames = images.map((item:any)=>{
+      return "assets/images/" + item.name
+    })
+      this.hotelImages = [...fileNames]
+    
+      // this.hotelRagistrationForm.controls['hotelImages'].patchValue(
+      //   {hotelImages : fileNames}
+      // )
+      
+      
+    }
 
   ngOnDestroy(){
     this.commonService.dataById = {};

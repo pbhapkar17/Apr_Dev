@@ -115,6 +115,46 @@
       "ownerCheck": "",
       "password": "",
       "id": 5
+    },
+    {
+      "ownerName": "poonam",
+      "ownerContact": "999",
+      "hotelName": "jjjjj",
+      "hotelAddress": "puneiii",
+      "hotelContact": "888",
+      "hotelMenu": "ikikki",
+      "roomsAvailable": "5",
+      "password": "pooja",
+      "hotelImages": "assets/images/hotel2.jpg",
+      "id": 6
+    },
+    {
+      "ownerName": "poonam",
+      "ownerContact": "999",
+      "hotelName": "jjjjj",
+      "hotelAddress": "puneiii",
+      "hotelContact": "888",
+      "hotelMenu": "ikikki",
+      "roomsAvailable": "5",
+      "password": "pooja",
+      "hotelImages": "assets/images/hotel2.jpg",
+      "id": 6
+    },
+    {
+      "ownerName": "poonam",
+      "ownerContact": "",
+      "hotelName": "",
+      "hotelAddress": "",
+      "hotelContact": "",
+      "hotelMenu": "",
+      "roomsAvailable": "",
+      "password": "",
+      "hotelImages": [
+        "assets/images/hotel2.jpg",
+        "assets/images/flower.jpg",
+        "assets/images/istockphoto-1198272365-170667a.jpg"
+      ],
+      "id": 7
     }
   ]
 }
