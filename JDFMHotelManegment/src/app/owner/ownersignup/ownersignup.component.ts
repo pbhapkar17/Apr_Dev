@@ -13,6 +13,7 @@ export class OwnersignupComponent {
   signUpForm!:FormGroup;
   journey!:string;
   postResponse:any;
+  compnies = ['wipro','IBM','INFY'];
   constructor(private fb:FormBuilder,
     private commonService: CommonService,
     private apiCallService: CommonApiCallService,
@@ -32,7 +33,8 @@ export class OwnersignupComponent {
       mobile:['',[]],
       password:['',[]],
       gender:['',[]],
-      file:['']
+      file:[''],
+      compnies:[[]]
       
 
     })
@@ -44,7 +46,8 @@ async submit(){
       Mobile :  this.signUpForm.value.mobile,
       Password :  this.signUpForm.value.password,
       Gender :  this.signUpForm.value.gender,
-      File :  this.signUpForm.value.file
+      File :  this.signUpForm.value.file,
+      companies : this.signUpForm.value.compnies
     }
 
     // this.apiCallService.postApiCall(this.journey,request).subscribe(resp=>{

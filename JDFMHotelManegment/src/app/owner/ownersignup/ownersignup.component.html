@@ -41,6 +41,13 @@
                 <mat-radio-button value="female">Female</mat-radio-button>
                 <mat-radio-button value="other">Other</mat-radio-button>
               </mat-radio-group> 
+
+              <mat-form-field>
+                <mat-label>compnies</mat-label>
+                <mat-select formControlName="compnies" multiple>
+                  <mat-option *ngFor="let compny of compnies" [value]="compny">{{compny}}</mat-option>
+                </mat-select>
+              </mat-form-field>
 <!-- 
               <mat-form-field appearance="outline">
                 <mat-label>Select a file</mat-label>

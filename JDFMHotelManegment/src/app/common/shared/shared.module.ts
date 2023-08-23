@@ -11,7 +11,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { ToastrModule } from 'ngx-toastr';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [],
   imports: [
@@ -26,7 +26,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatToolbarModule,
     MatIconModule,
     ToastrModule.forRoot(),
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
    
   ],
   exports : [
@@ -39,7 +40,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatFormFieldModule,
     MatToolbarModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
    
   ]
 })

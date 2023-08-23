@@ -53,6 +53,28 @@
       "Password": "Sharu@123",
       "Gender": "female",
       "id": 7
+    },
+    {
+      "UserName": "poonam",
+      "Email": "poonambhapkar34@gmail.com",
+      "Mobile": "565656565",
+      "Password": "poonam@123",
+      "Gender": "female",
+      "File": "",
+      "id": 8
+    },
+    {
+      "UserName": "pooja",
+      "Email": "pooja@gamil.com",
+      "Mobile": "98989898",
+      "Password": "pooja@123",
+      "Gender": "female",
+      "File": "",
+      "companies": [
+        "wipro",
+        "IBM"
+      ],
+      "id": 9
     }
   ],
   "hotelDetails": [
