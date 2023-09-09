@@ -10,6 +10,7 @@
         <th>Hotel Address</th>
         <th>Hotel Contact</th>
         <th>Hotel Menu</th>
+        <th> Hotel Images</th>
         <th>Delete</th>
         <th>Edit</th>
     </tr>
@@ -20,6 +21,7 @@
        <td>{{hotelData.hotelAddress}}</td>
        <td>{{hotelData.hotelContact}}</td>
        <td>{{hotelData.hotelMenu}}</td>
+       <td ><img *ngIf="hotelData.hotelImages" [src]="hotelData.hotelImages" height="100" width="150"></td>
        <td><mat-icon (click)="delete(hotelData.id)">delete</mat-icon></td>
        <td><mat-icon (click)="edit(hotelData.id)" >mode_edit</mat-icon></td>
     </tr>

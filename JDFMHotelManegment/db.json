@@ -6,7 +6,7 @@
       "UserName": "poonam",
       "Email": "poonambhapkar34@gmail.com",
       "Mobile": "6565666653",
-      "Password": "poonam@123",
+      "Password": "d",
       "Gender": "female",
       "id": 1
     },
@@ -53,6 +53,28 @@
       "Password": "Sharu@123",
       "Gender": "female",
       "id": 7
+    },
+    {
+      "UserName": "poonam",
+      "Email": "poonambhapkar34@gmail.com",
+      "Mobile": "565656565",
+      "Password": "poonam@123",
+      "Gender": "female",
+      "File": "",
+      "id": 8
+    },
+    {
+      "UserName": "pooja",
+      "Email": "pooja@gamil.com",
+      "Mobile": "98989898",
+      "Password": "pooja@123",
+      "Gender": "female",
+      "File": "",
+      "companies": [
+        "wipro",
+        "IBM"
+      ],
+      "id": 9
     }
   ],
   "hotelDetails": [
@@ -115,6 +137,46 @@
       "ownerCheck": "",
       "password": "",
       "id": 5
+    },
+    {
+      "ownerName": "poonam",
+      "ownerContact": "999",
+      "hotelName": "jjjjj",
+      "hotelAddress": "puneiii",
+      "hotelContact": "888",
+      "hotelMenu": "ikikki",
+      "roomsAvailable": "5",
+      "password": "pooja",
+      "hotelImages": "assets/images/hotel2.jpg",
+      "id": 6
+    },
+    {
+      "ownerName": "poonam",
+      "ownerContact": "999",
+      "hotelName": "jjjjj",
+      "hotelAddress": "puneiii",
+      "hotelContact": "888",
+      "hotelMenu": "ikikki",
+      "roomsAvailable": "5",
+      "password": "pooja",
+      "hotelImages": "assets/images/hotel2.jpg",
+      "id": 6
+    },
+    {
+      "ownerName": "poonam",
+      "ownerContact": "",
+      "hotelName": "",
+      "hotelAddress": "",
+      "hotelContact": "",
+      "hotelMenu": "",
+      "roomsAvailable": "",
+      "password": "",
+      "hotelImages": [
+        "assets/images/hotel2.jpg",
+        "assets/images/flower.jpg",
+        "assets/images/istockphoto-1198272365-170667a.jpg"
+      ],
+      "id": 7
     }
   ]
 }

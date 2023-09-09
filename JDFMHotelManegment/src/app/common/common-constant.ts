@@ -11,3 +11,7 @@ export const endPoints = {
     owner:'owner',
     hotelBokkin:'hotelBooking'
 }
+
+export const imagePath = {
+  weatherImgUrl : "assets/hot-temp.png",//assets/images/hotel.jpg
+}

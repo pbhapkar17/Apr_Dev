@@ -33,14 +33,18 @@
     <mat-form-field class="example-full-width">
         <mat-label>New Password</mat-label>
         <input matInput formControlName="newPassword">
+        <mat-error> Password is Required </mat-error>
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
         <mat-label>Confirm Password</mat-label>
         <input matInput type="password" formControlName="confirmPassword">
-    </mat-form-field>
+        <mat-error> Confirm Password is Required </mat-error>
+        <!-- <mat-error *ngIf="forgetPasswordForm.hasError('notSame')">password not match</mat-error><br> -->
+    </mat-form-field><br>
+    <span class="error" *ngIf="forgetPasswordForm.hasError('notSame')">password not match</span><br>
 
     <div>
-        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+        <button mat-raised-button color="primary" (click)="submit()" disabled="!forgetPasswordForm.valid">Submit</button>
     </div>
 </form>
